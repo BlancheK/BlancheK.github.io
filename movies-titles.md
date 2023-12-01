@@ -12,13 +12,15 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 # Introduction
 
-% Insights on titles
-% https://github.com/daattali/beautiful-jekyll/discussions/878
+<!--- Insights on titles
+ https://github.com/daattali/beautiful-jekyll/discussions/878
+ --->
 # Time series analysis
 
 # Genre analysis
 
-% Successful titles analysis
+<!---  Successful titles analysis --->
+
 # Confounders
 
 # Key features
