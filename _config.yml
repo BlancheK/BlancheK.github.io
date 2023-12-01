@@ -20,15 +20,15 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 ###############################################
 
 navbar-links:
-  Introduction: "aboutme"
+  Introduction: "movies-titles/Introduction"
   Insights on title:
-    - Time series analysis: "https://beautifuljekyll.com"
-    - Genre analysis: "https://www.markdowntutorial.com/"
+    - Time series analysis: ""
+    - Genre analysis: ""
   Title success analysis: 
-    - Confounders: "https://deanattali.com"
+    - Confounders: ""
     - Key features: ""
     - Prediction: ""
-  Interactive tool: ""
+  Interactive tool: "https://github.com/epfl-ada/ada-2023-project-randada/blob/main/README.md"
 
 ################
 # --- Logo --- #
