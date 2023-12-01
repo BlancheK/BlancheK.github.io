@@ -20,7 +20,7 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 ###############################################
 
 navbar-links:
-  Introduction: "movies-titles/Introduction"
+  Introduction: "movies-titles"
   Insights on title:
     - Time series analysis: ""
     - Genre analysis: ""
