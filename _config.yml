@@ -20,15 +20,15 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 ###############################################
 
 navbar-links: "movies-titles
-  Introduction: "#"
+  Introduction: "#
   Insights on title:
-    - Time series analysis: "#"
-    - Genre analysis: "#"
+    - Time series analysis: "#
+    - Genre analysis: "#
   Title success analysis: 
-    - Confounders: "#"
-    - Key features: "#"
-    - Prediction: "#"
-  Interactive tool: "#"
+    - Confounders: "#
+    - Key features: "#
+    - Prediction: "#
+  Interactive tool: "#
 
 ################
 # --- Logo --- #
@@ -104,9 +104,9 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#008080"
+navbar-col: "#ffd700"
 navbar-text-col: "#000080"
-navbar-border-col: "#008080"
+navbar-border-col: "#ffd700"
 page-col: "#f0f8ff"
 text-col: "#000080"
 link-col: "#483d8b"
