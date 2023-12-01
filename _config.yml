@@ -19,8 +19,8 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 # --- List of links in the navigation bar --- #
 ###############################################
 
-navbar-links:
-  Introduction: "movies-titles"
+navbar-links: "movies-titles"
+  Introduction: "#"
   Insights on title:
     - Time series analysis: "#"
     - Genre analysis: "#"
