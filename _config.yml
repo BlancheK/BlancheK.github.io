@@ -20,10 +20,10 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 ###############################################
 
 navbar-links: "movies-titles
-  Introduction: "#
+  Introduction: "#introduction"
   Insights on title:
-    - Time series analysis: "#
-    - Genre analysis: "#
+    - Time series analysis: "#time-series-analysis"
+    - Genre analysis: "#genre-analysis"
   Title success analysis: 
     - Confounders: "#
     - Key features: "#
