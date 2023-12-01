@@ -10,21 +10,25 @@
 ############################
 
 # Name of website
-title: Titles to success
+title: Title to Success
 
 # Your name to show in the footer
-author: Some Person
+author: Alice Granboulan, Aurèle Barteje, Blanche Kerorgant, Clarisse Pierre, Émilie Monnet
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Introduction: "aboutme"
+  Insights on title:
+    - Time series analysis: "https://beautifuljekyll.com"
+    - Genre analysis: "https://www.markdowntutorial.com/"
+  Title success analysis: 
+    - Confounders: "https://deanattali.com"
+    - Key features: ""
+    - Prediction: ""
+  Interactive tool: ""
 
 ################
 # --- Logo --- #
@@ -50,35 +54,7 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
-#  medium: yourname
-#  reddit: yourname
-#  linkedin: daattali
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
-#  telegram: yourname
-#  calendly: yourname
-#  mastodon: instance.url/@username
-#  bluesky: yourname
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
-#  kaggle: yourname
-#  hackerrank: yourname
-#  gitlab: yourname
+  github: epfl-ada/ada-2023-project-randada
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
@@ -97,7 +73,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "randada.com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -112,7 +88,7 @@ feed_show_tags: true
 post_search: true
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+edit_page_button: false
 
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
