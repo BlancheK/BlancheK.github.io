@@ -10,18 +10,19 @@ While a compelling title doesn't guarantee the success of your movie, it plays a
 
 We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the protagonist's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
 
-## Introduction
+# Introduction
 
-## Insights on titles
-### Time series analysis
+% Insights on titles
+% https://github.com/daattali/beautiful-jekyll/discussions/878
+# Time series analysis
 
-### Genre analysis
+# Genre analysis
 
-## Successful titles analysis
-### Confounders
+% Successful titles analysis
+# Confounders
 
-### Key features
+# Key features
 
-### Prediction
+# Prediction
 
-## Interactive tool
+# Interactive tool
