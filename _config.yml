@@ -28,7 +28,9 @@ navbar-links:
     - Title sucess key features: ""
     - Title success prediction: ""
     - Interactive tool: ""
-  Resources: "http://www.cs.cmu.edu/~ark/personas/"
+  Resources: 
+    - Dataset: "http://www.cs.cmu.edu/~ark/personas/"
+    - Repository: "https://github.com/BlancheK/MovieTitles"
 
 ################
 # --- Logo --- #
