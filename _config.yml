@@ -22,11 +22,8 @@ author: Alice Granboulan, Aur√®le Barteje, Blanche Kerorgant, Clarisse Pierre, √
 navbar-links: 
   Introduction: "movies-titles"
   Data analysis:
-    - Time series analysis: ""
-    - Genre analysis: ""
-    - Confounders: ""
-    - Title sucess key features: ""
-    - Title success prediction: ""
+    - Insights on titles: ""
+    - Successful titles analysis: ""
     - Interactive tool: ""
   Resources: 
     - Dataset: "http://www.cs.cmu.edu/~ark/personas/"
