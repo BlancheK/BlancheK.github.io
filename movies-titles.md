@@ -12,19 +12,47 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 # Introduction
 
-<!--- Insights on titles
- https://github.com/daattali/beautiful-jekyll/discussions/878
+# Insights on titles
+<!--- https://github.com/daattali/beautiful-jekyll/discussions/878
  --->
-# Time series analysis
+## Time series analysis
 
-# Genre analysis
+{% include timeseries_length_words.html %}
 
-<!---  Successful titles analysis --->
+The title length is scattered at the beginning of the 20th century. The average title length is rather stable from 1930 to 2012 (very small confidence intervals).
 
-# Confounders
+As very few movies were released at the beginning of the 20th century, we will plot join distributions of title length and number of movies released per year.
 
-# Key features
+## Genre analysis
 
-# Prediction
+Does each genre have a specific title length? Did it evolve through time?
+
+{% include genres_length_words.html %}
+
+# Successful titles analysis
+
+It could be argued that shorter titles are easier to remember and contribute to a movie's success. It could also be argued that longer titles can be more original and that originality also contributes to a movie's success. We will investigate the link between movie title length and different ratings.
+
+## Confounders
+
+While the title seems to be a crucial aspect since it is a the first hook, it is undoubtable that other factors, such as the **cast, director, and movie studio**, may exert a more significant influence on a film's success. To gain a comprehensive understanding of the impact of the title, it is essential to analyze potential confounding variables affecting success.
+
+In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
+
+
+## Key features
+
+The **title length** - in words or in characters - is the most obvious title feature. Does the title length impact the mocie ratings?
+
+{% include success_length_words.html %}
+
+For **short titles** (1 to 5 words), all ratings values are **less scattered** and they range around 55/100.
+
+For **long titles** (5 to 10 words), Rotten tomatoes ratings values are **very scattered** : the confidence interval ranges from 45/100 to ~80/100 for 9-word titles. 
+Critics rating are more scattered than audience ratings. Two reasons could explain this: (1) there are more ratings by audience than by critics, (2) critics are movie experts and have stronger opinions than the public, they either love or hate a movie.
+
+*blabla à améliorer c'est juste pour avoir une idée du rendu*
+
+## Prediction
 
 # Interactive tool
