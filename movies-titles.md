@@ -17,8 +17,9 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
  --->
 ## Time series analysis
 
-{% include timeseries_length_words.html %}
-
+<!--- {% include timeseries_length_words.html %}
+ --->
+ 
 The title length is scattered at the beginning of the 20th century. The average title length is rather stable from 1930 to 2012 (very small confidence intervals).
 
 As very few movies were released at the beginning of the 20th century, we will plot join distributions of title length and number of movies released per year.
@@ -27,8 +28,9 @@ As very few movies were released at the beginning of the 20th century, we will p
 
 Does each genre have a specific title length? Did it evolve through time?
 
-{% include genres_length_words.html %}
-
+<!--- {% include genres_length_words.html %}
+ --->
+ 
 # Successful titles analysis
 
 It could be argued that shorter titles are easier to remember and contribute to a movie's success. It could also be argued that longer titles can be more original and that originality also contributes to a movie's success. We will investigate the link between movie title length and different ratings.
@@ -44,7 +46,8 @@ In this context, success is measured by both the movie revenue (box office earni
 
 The **title length** - in words or in characters - is the most obvious title feature. Does the title length impact the mocie ratings?
 
-{% include success_length_words.html %}
+<!--- {% include success_length_words.html %}
+ --->
 
 For **short titles** (1 to 5 words), all ratings values are **less scattered** and they range around 55/100.
 
