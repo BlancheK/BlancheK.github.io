@@ -14,7 +14,9 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Time series analysis
 
-*graph title length evolution -> interactive: nb of movies per year visible with the cursor* 
+*graph title length evolution -> interactive: nb of movies per year visible with the cursor*
+
+{% include time-series-length-words.html %}
 
 The title length is scattered at the beginning of the 20th century. The average title length is rather stable from 1930 to 2012 (very small confidence intervals).
 
