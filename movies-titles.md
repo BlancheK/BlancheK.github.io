@@ -10,19 +10,27 @@ While a compelling title doesn't guarantee the success of your movie, it plays a
 
 We plan to analyze if a movie title can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the protagonist's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
 
-# Introduction
-
 # Insights on titles
 
 ## Time series analysis
- 
+
+*graph title length evolution -> interactive: nb of movies per year visible with the cursor* 
+
 The title length is scattered at the beginning of the 20th century. The average title length is rather stable from 1930 to 2012 (very small confidence intervals).
 
 As very few movies were released at the beginning of the 20th century, we will plot join distributions of title length and number of movies released per year.
 
+*graph join distributions*
+
 ## Genre analysis
 
 Does each genre have a specific title length? Did it evolve through time?
+
+*graph title length evolution in words (and in characters?)*
+
+Specific vocabulary for each movie genre?
+
+*graph positive sentiment per genre*
  
 # Successful titles analysis
 
@@ -34,17 +42,24 @@ While the title seems to be a crucial aspect since it is a the first hook, it is
 
 In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
 
+We would like to know if the presence of **famous actors** influence the movie success. To do so, we use a list of the 100 most famous actors to discriminate famous and not famous actors.
+
+*graphs actor / director / studio / budget influence on success*
 
 ## Key features
 
+What are the key features of a successful movie title? Investigate whether movie titles with certain features (e.g., length, plot summary, puns, protagonist name) are associated with higher success. 
+
 The **title length** - in words or in characters - is the most obvious title feature. Does the title length impact the mocie ratings?
+
+*graph title length vs 3 success indicators (ratings)*
 
 For **short titles** (1 to 5 words), all ratings values are **less scattered** and they range around 55/100.
 
 For **long titles** (5 to 10 words), Rotten tomatoes ratings values are **very scattered** : the confidence interval ranges from 45/100 to ~80/100 for 9-word titles. 
 Critics rating are more scattered than audience ratings. Two reasons could explain this: (1) there are more ratings by audience than by critics, (2) critics are movie experts and have stronger opinions than the public, they either love or hate a movie.
 
-*blabla à améliorer c'est juste pour avoir une idée du rendu*
+*graph analyzing key features after matching*
 
 ## Prediction
 
