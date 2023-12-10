@@ -34,7 +34,7 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Confounders
 
-*graphs : bar plots or linear regression with success*
+*graphs : bar plots or linear regression with success => waiting for a dataset with success columns*
 - *actor (nb of famous actors) : linear regression*
 - *director : bar plot*
 - *studio  : bar plot*
@@ -43,13 +43,13 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Key features
 
-*graph title length (words, characters)*
+*graph title length (words, characters) => waiting for a dataset*
 
-*graph part-of-speech : grammatical (verbs, adjective)*
+*graph part-of-speech : grammatical (verbs, adjective) => to be done*
 
-*graph part-of-speech : proper nouns (characters, dates, location)*
+*graph part-of-speech : proper nouns (characters, dates, location) => to be done*
 
-*graph sentiment analysis*
+*graph sentiment analysis => waiting for a dataset*
 
 ## Prediction
 
