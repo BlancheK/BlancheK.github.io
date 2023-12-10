@@ -14,7 +14,7 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Time series analysis
 
-*graph title length evolution -> interactive: nb of movies per year visible with the cursor*
+*graph title length evolution : OK*
 
 {% include time-series-length-words.html %}
 
@@ -22,7 +22,9 @@ The title length is scattered at the beginning of the 20th century. The average 
 
 As very few movies were released at the beginning of the 20th century, we will plot join distributions of title length and number of movies released per year.
 
-*graph join distributions*
+*graph join distributions : OK*
+
+{% include time-series-heatmap.html %}
 
 ## Genre analysis
 
