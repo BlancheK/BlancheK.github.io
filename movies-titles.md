@@ -30,7 +30,9 @@ As very few movies were released at the beginning of the 20th century, we will p
 
 Does each genre have a specific title length? Did it evolve through time?
 
-*graph title length evolution in words (and in characters?)*
+*graph title length evolution in words : OK (and in characters?)*
+
+{% include genres-length-words.html %}
 
 Specific vocabulary for each movie genre?
 
