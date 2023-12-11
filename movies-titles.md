@@ -38,12 +38,24 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Confounders
 
-*graphs : bar plots or linear regression with success => waiting for a dataset with success columns*
+*graphs : bar plots or linear regression with success*
 - *actor (nb of famous actors) : linear regression*
 - *director : bar plot*
 - *studio  : bar plot*
 - *budget vs ratings (justif) : linear regression*
 - *genre*
+
+{% include confounder-actors-v2.html %}
+
+{% include confounder-directors.html %}
+
+{% include confounder-studios.html %}
+
+{% include confounder-budget-distribution.html %}
+
+{% include confounder-budget.html %}
+
+{% include confounder-genres.html %}
 
 ## Key features
 
