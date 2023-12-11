@@ -20,6 +20,8 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 *graph join distributions : OK*
 
+{% include time-series-joint-distributions-filtered.html %}
+
 {% include time-series-heatmap.html %}
 
 ## Genre analysis
@@ -27,6 +29,8 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 *graph title length evolution in words : OK (and in characters?)*
 
 {% include genres-length-words.html %}
+
+{% include genres-length-words-v3.html %}
 
 *graph positive sentiment per genre => waiting for a dataset with pos/neg sentiment columns*
  
