@@ -38,12 +38,12 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Confounders
 
-*graphs : bar plots or linear regression with success*
-- *actor (nb of famous actors) : linear regression*
+*graphs : OK*
+- *actor (nb of famous actors) : bar plot -> linear regression?*
 - *director : bar plot*
 - *studio  : bar plot*
-- *budget vs ratings (justif) : linear regression*
-- *genre*
+- *budget vs ratings (justif) : scatter plot -> linear regression?*
+- *genre : bar plot*
 
 {% include confounder-actors-v2.html %}
 
@@ -59,7 +59,11 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Key features
 
-*graph title length (words, characters) => waiting for a dataset*
+*graph title length (words, characters) OK*
+
+{% include success-length-words-heatmap.html %}
+
+{% include success-length-characters-heatmap.html %}
 
 *graph part-of-speech : grammatical (verbs, adjective) => to be done*
 
