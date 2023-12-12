@@ -36,6 +36,8 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
  
 # Successful titles analysis
 
+{% include success-indicator-distribution.html %}
+
 ## Confounders
 
 *graphs : OK*
