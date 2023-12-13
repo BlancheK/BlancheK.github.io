@@ -65,17 +65,33 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Key features
 
-*graph title length (words, characters) OK*
+*graph title length (words, characters) : OK*
 
 {% include success-length-words-heatmap.html %}
 
 {% include success-length-characters-heatmap.html %}
 
-*graph part-of-speech : grammatical (verbs, adjective) => to be done*
+*graph presence of protagonist name : OK*
 
-*graph part-of-speech : proper nouns (characters, dates, location) => to be done*
+{% include success-protagonist.html %}
 
-*graph sentiment analysis => waiting for a dataset*
+*graph part-of-speech : grammatical (verbs, adjective) : OK*
+
+{% include success-grammatical-tag.html %}
+
+*graph part-of-speech : proper nouns (characters, dates, location) : OK*
+
+{% include success-org-nouns.html %}
+
+{% include success-person-nouns.html %}
+
+{% include success-NER.html %}
+
+*graph sentiment analysis : OK*
+
+{% include success-pos-sent-heatmap.html %}
+
+{% include success-neg-sent-heatmap.html %}
 
 ## Prediction
 
