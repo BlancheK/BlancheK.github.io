@@ -26,13 +26,17 @@ We plan to analyze if a movie title can be linked to its **success**. We will st
 
 ## Genre analysis
 
-*graph title length evolution in words : OK (and in characters?)*
+*graph title length evolution in words : OK*
 
 {% include genres-length-words.html %}
 
 {% include genres-length-words-v3.html %}
 
-*graph positive sentiment per genre => waiting for a dataset with pos/neg sentiment columns*
+*graph positive sentiment per genre : OK but issue with mean values equal to zero*
+
+{% include genres-pos-sentiment.html %}
+
+{% include genres-neg-sentiment.html %}
  
 # Successful titles analysis
 
