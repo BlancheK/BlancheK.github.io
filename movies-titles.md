@@ -123,5 +123,6 @@ We want to investigate the lexical fields and the conotation of our titles. This
 
 # Interactive tool
 
-
 <img src="assets/img/hollywood.jpg" height=682px width=1024px class="center"/>
+
+-------------
