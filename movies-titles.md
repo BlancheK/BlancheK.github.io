@@ -124,4 +124,4 @@ We want to investigate the lexical fields and the conotation of our titles. This
 # Interactive tool
 
 
-<img src="/assets/img/hollywood.jpg" alt="Road to Hollywood">
+{% include /assets/img/hollywood.jpg %>
