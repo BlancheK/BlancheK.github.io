@@ -122,3 +122,6 @@ We want to investigate the lexical fields and the conotation of our titles. This
 *examples from real movies between 2012 and 2022*
 
 # Interactive tool
+
+
+<img src="/assets/img/hollywood.jpg" alt="Road to Hollywood">
