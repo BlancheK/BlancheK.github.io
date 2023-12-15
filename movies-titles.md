@@ -44,7 +44,7 @@ The movie genre and the sentiment conveyed in its title are intertwined aspects 
 
 - Titles associated with art films often carry positive sentiments, reflecting the artistic and creative nature of these films.
 
-{% include times-series-sentiment-analysisn.html %}
+{% include times-series-sentiment-analysis.html %}
 
 {% include times-series-part-of-speech.html %}
 
