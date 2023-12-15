@@ -141,6 +141,6 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 # Interactive tool
 
-<img src="assets/img/hollywood.png" height=682px width=1024px class="center"/>
+<img src="assets/img/hollywood.png"/>
 
 -------------
