@@ -13,7 +13,7 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 
 # Insights on titles
 
-{% include genres-length-words.html %}
+{% include times-series-length-characters.html %}
 
 The movie genre and the sentiment conveyed in its title are intertwined aspects that play a significant role in shaping audience expectations and influencing the overall cinematic experience. The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. Here's an exploration of how sentiment analysis and movie genres intersect.
 
@@ -44,7 +44,11 @@ The movie genre and the sentiment conveyed in its title are intertwined aspects 
 
 - Titles associated with art films often carry positive sentiments, reflecting the artistic and creative nature of these films.
 
- 
+{% include times-series-sentiment-analysisn.html %}
+
+{% include times-series-part-of-speech.html %}
+
+
 # Successful titles analysis
 
 {% include success-indicator-distribution.html %}
