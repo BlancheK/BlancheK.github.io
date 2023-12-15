@@ -35,9 +35,21 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 
 *graph positive sentiment per genre : OK but issue with mean values equal to zero*
 
+The movie genre and the sentiment conveyed in its title are intertwined aspects that play a significant role in shaping audience expectations and influencing the overall cinematic experience. The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. Here's an exploration of how sentiment analysis and movie genres intersect.
+
 {% include genres-pos-sentiment.html %}
 
 {% include genres-neg-sentiment.html %}
+
+Titles in drama and romance genres lean towards positive or neutral sentiments to reflect the emotional and heartfelt nature of the narrative. 
+Horror and thriller titles frequently incorporate negative sentiments to create an air of suspense, mystery, or fear. The goal is to intrigue and elicit an emotional response. Example: "Psycho" 
+Sport movie titles often carry positive sentiments to reflect the themes of triumph, teamwork, and personal growth. Positive sentiments contribute to the inspirational and uplifting nature of these films.
+Titles associated with world cinema often carry positive sentiments, emphasizing the diverse and enriching cultural experiences depicted in these films. 
+Political movie titles may carry positive sentiments, particularly if the focus is on inspiring change, highlighting positive political movements, or celebrating leaders and figures who made a positive impact.
+Historical movie titles may carry positive sentiments, emphasizing the inspiration from historical events, heroic figures, and significant moments.
+Fictional movie titles may carry negative sentiments if the focus is on dystopian or dark themes.
+Titles associated with art films often carry positive sentiments, reflecting the artistic and creative nature of these films.
+
  
 # Successful titles analysis
 
