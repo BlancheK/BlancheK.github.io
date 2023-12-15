@@ -13,13 +13,7 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 
 # Insights on titles
 
-## Genre analysis
-
-*graph title length evolution in words : OK*
-
 {% include genres-length-words.html %}
-
-*graph positive sentiment per genre : OK but issue with mean values equal to zero*
 
 The movie genre and the sentiment conveyed in its title are intertwined aspects that play a significant role in shaping audience expectations and influencing the overall cinematic experience. The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. Here's an exploration of how sentiment analysis and movie genres intersect.
 
@@ -61,13 +55,6 @@ We are interested in conducting an analysis to explore the relationship between 
 In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
 
 
-*graphs : OK*
-- *actor (nb of famous actors) : bar plot -> linear regression?*
-- *director : bar plot*
-- *studio  : bar plot*
-- *budget vs ratings (justif) : scatter plot -> linear regression?*
-- *genre : bar plot*
-
 We would like to know if the presence of famous actors influence the movie success.
 
 {% include confounder-actors-v2.html %}
@@ -98,7 +85,7 @@ The budget of a movie affects its production quality, scale, and marketing effor
 
 ## Key features
 
-*graph title length (words, characters) : OK*
+### Title length
 
 The length of a movie title plays a crucial role in shaping audience expectations, establishing tone, and contributing to a film's overall marketing strategy. A well-crafted title can pique curiosity, evoke emotions, and even serve as a memorable brand for the film. Whether brief and explicit or long and intriguing, a title can contribute significantly to a film's success by resonating with its target audience and conveying the essence of the cinematic experience it offers.
 
@@ -107,7 +94,7 @@ Two contrasting examples that highlight the impact of title length and style are
 
 {% include success-length-characters-heatmap.html %}
 
-*graph presence of protagonist name : OK*
+### Presence of protagonist name
 
 {% include success-protagonist.html %}
 
@@ -122,11 +109,11 @@ Examples of movies that incorporate the protagonist's name into the title includ
 
 We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
 
-*graph part-of-speech : grammatical (verbs, adjective) : OK*
+### Part-of-speech : grammatical (verbs, adjective)
 
 {% include success-grammatical-tag.html %}
 
-*graph part-of-speech : proper nouns (characters, dates, location) : OK*
+### Part-of-speech : proper nouns (characters, dates, location)
 
 {% include success-org-nouns.html %}
 
@@ -135,8 +122,7 @@ We want to investigate the lexical fields and the conotation of our titles. This
 {% include success-NER.html %}
 
 
-
-*graph sentiment analysis : OK*
+### Sentiment analysis
 
 A positively framed title can generate enthusiasm and attract viewers with the promise of an uplifting or enjoyable experience. For example, titles like "Happy Feet" or "The pursuit of Happiness" evoke positive emotions and may attract audiences seeking a feel-good or heartwarming cinematic experience. These titles create an expectation of positivity and may contribute to the film's success, especially if the content aligns with the sentiment conveyed by the title.
 
@@ -155,6 +141,6 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 # Interactive tool
 
-<img src="assets/img/hollywood.jpg" height=682px width=1024px class="center"/>
+<img src="assets/img/hollywood.png" height=682px width=1024px class="center"/>
 
 -------------
