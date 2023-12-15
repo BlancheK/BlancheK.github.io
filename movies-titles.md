@@ -60,15 +60,20 @@ We would like to know if the presence of famous actors influence the movie succe
 
 {% include confounder-actors-v2.html %}
 
-Here we are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film. Our findings suggest a positive association between the presence of famous actors and increased movie success. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
+Here we are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film.  Famous actors can draw audiences based on their star power, fan following, and perceived acting skills. A well-known cast can enhance a film's marketability and contribute to its initial box office performance.
+
+Our findings suggest a positive association between the presence of famous actors and increased movie success. The number of famous actors and their chemistry on screen can also affect the film's appeal. Ensemble casts may attract a diverse audience, especially if each actor has a substantial fan base. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
+
+It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
 
 
-We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
+We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... The reputation and track record of the movie production company can influence audience expectations. Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
+NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
 
 {% include confounder-studios.html %}
 
 
-We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm. We selected a list of the top 50 influential directors (found on https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
+We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the top 50 influential directors (found on https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
 
 {% include confounder-directors.html %}
 
@@ -78,13 +83,19 @@ We explored the impact of renowned film directors on movie success : this analys
 
 {% include confounder-budget.html %}
 
+The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal
+
 {% include confounder-genres.html %}
 
 ## Key features
 
 *graph title length (words, characters) : OK*
 
-It could be argued that shorter titles are easier to remember and contribute to a movie's success. It could also be argued that longer titles can be more original and that originality also contributes to a movie's success. We will investigate the link between movie title length and different ratings.
+The length of a movie title plays a crucial role in shaping audience expectations, establishing tone, and contributing to a film's overall marketing strategy. A well-crafted title can pique curiosity, evoke emotions, and even serve as a memorable brand for the film. Whether brief and explicit or long and intriguing, a title can contribute significantly to a film's success by resonating with its target audience and conveying the essence of the cinematic experience it offers.
+
+
+Two contrasting examples that highlight the impact of title length and style are "Alien" and "Eternal Sunshine of the Spotless Mind." "Alien", directed by Ridley Scott, is a short explicit title that immediately conveys a sense of mystery and suspense. The simplicity of the title contributes to the film's effectiveness in marketing, making it easy to remember and creating a strong, lasting impression. The brevity of "Alien" might be ideal for the science fiction and horror genres, emphasizing the enigmatic nature of the extraterrestrial threat and appealing to an audience seeking an adrenaline-fueled experience. On the other hand, "Eternal Sunshine of the Spotless Mind," directed by Michel Gondry, presents a lengthy and poetic title that sparks curiosity and suggests a more complex narrative. The title, derived from a line in Alexander Pope's poem, implies a blend of romance, philosophy, and introspection. The deliberate choice of a longer and more intricate title aligns with the film's exploration of memory, relationships, and the human psyche. This approach caters to an audience interested in thought-provoking and emotionally resonant stories, setting the tone for a more nuanced viewing experience.
+
 
 {% include success-length-words-heatmap.html %}
 
@@ -93,6 +104,14 @@ It could be argued that shorter titles are easier to remember and contribute to 
 *graph presence of protagonist name : OK*
 
 {% include success-protagonist.html %}
+
+
+The inclusion of the protagonist's name in a movie title can be a strategic storytelling choice that immediately centers the narrative around a specific character. This approach serves multiple purposes in shaping audience expectations and marketing the film.
+
+
+Firstly, featuring the protagonist's name in the title establishes a clear focal point for the audience. It signals that the story revolves around this central character, offering a glimpse into their journey, struggles, or triumphs. This clarity can attract viewers who are drawn to character-driven narratives and are interested in following the personal development of the main character. Secondly, the protagonist's name in the title provides a straightforward identifier, making it easier for audiences to recall the movie. This can be especially effective in building a franchise or series around a particular character, creating a recognizable brand.
+Examples of movies that incorporate the protagonist's name into the title include "Forrest Gump," , "Rocky",“Annie Hall”, “John Wick” …
+
 
 
 We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
@@ -109,7 +128,14 @@ We want to investigate the lexical fields and the conotation of our titles. This
 
 {% include success-NER.html %}
 
+
+
 *graph sentiment analysis : OK*
+
+A positively framed title can generate enthusiasm and attract viewers with the promise of an uplifting or enjoyable experience. For example, titles like "Happy Feet" or "The pursuit of Happiness" evoke positive emotions and may attract audiences seeking a feel-good or heartwarming cinematic experience. These titles create an expectation of positivity and may contribute to the film's success, especially if the content aligns with the sentiment conveyed by the title.
+
+
+Conversely, a negatively framed title might generate intrigue or set a darker tone, potentially attracting audiences interested in suspense, thrill, or drama. Movies like "Requiem for a dream" or "No Country for Old Men" use negative sentiments in their titles to signal intense, suspenseful narratives. In these cases, the negative sentiment may contribute to the film's success by attracting audiences who appreciate more challenging or intense storytelling.
 
 {% include success-pos-sent-heatmap.html %}
 
