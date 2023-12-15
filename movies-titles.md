@@ -13,25 +13,11 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 
 # Insights on titles
 
-## Time series analysis
-
-*graph title length evolution : OK*
-
-{% include time-series-length-words.html %}
-
-*graph join distributions : OK*
-
-{% include time-series-joint-distributions-filtered.html %}
-
-{% include time-series-heatmap.html %}
-
 ## Genre analysis
 
 *graph title length evolution in words : OK*
 
 {% include genres-length-words.html %}
-
-{% include genres-length-words-v3.html %}
 
 *graph positive sentiment per genre : OK but issue with mean values equal to zero*
 
@@ -104,9 +90,6 @@ We explored the impact of renowned film directors on movie success : this analys
 {% include confounder-directors.html %}
 
 
-
-{% include confounder-budget-distribution.html %}
-
 {% include confounder-budget.html %}
 
 The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal
@@ -121,9 +104,6 @@ The length of a movie title plays a crucial role in shaping audience expectation
 
 
 Two contrasting examples that highlight the impact of title length and style are "Alien" and "Eternal Sunshine of the Spotless Mind." "Alien", directed by Ridley Scott, is a short explicit title that immediately conveys a sense of mystery and suspense. The simplicity of the title contributes to the film's effectiveness in marketing, making it easy to remember and creating a strong, lasting impression. The brevity of "Alien" might be ideal for the science fiction and horror genres, emphasizing the enigmatic nature of the extraterrestrial threat and appealing to an audience seeking an adrenaline-fueled experience. On the other hand, "Eternal Sunshine of the Spotless Mind," directed by Michel Gondry, presents a lengthy and poetic title that sparks curiosity and suggests a more complex narrative. The title, derived from a line in Alexander Pope's poem, implies a blend of romance, philosophy, and introspection. The deliberate choice of a longer and more intricate title aligns with the film's exploration of memory, relationships, and the human psyche. This approach caters to an audience interested in thought-provoking and emotionally resonant stories, setting the tone for a more nuanced viewing experience.
-
-
-{% include success-length-words-heatmap.html %}
 
 {% include success-length-characters-heatmap.html %}
 
