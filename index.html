@@ -3,9 +3,10 @@ layout: home
 title: Title to Success
 subtitle: How to design a successful movie title?
 ---
-
 <!-- index.html -->
 
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +14,12 @@ subtitle: How to design a successful movie title?
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Fun Facts</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
 </head>
 <body>
     <div class="swiper-container">
         <div class="swiper-wrapper" id="swiper-wrapper">
-            {% for movie in movies %}
+            {% for movie in site.data.movies %}
                 {% include movie-card.html %}
             {% endfor %}
         </div>
@@ -27,8 +28,6 @@ subtitle: How to design a successful movie title?
         <div class="swiper-button-prev"></div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 </body>
 </html>
-
-
