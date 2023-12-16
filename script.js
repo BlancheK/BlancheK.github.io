@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const movies = [
         {
             title: 'Inception',
-            poster: 'inception-poster.jpg',
+            poster: 'assets/img/inception-poster.jpg',
             funFact: 'Christopher Nolan wrote the script for Inception over a period of 10 years.',
         },
         // Add more movie data as needed
