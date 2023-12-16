@@ -5,7 +5,7 @@ subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 ---
 
-{% include swipe.html %}
+{% include movie-card.html %}
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
 
