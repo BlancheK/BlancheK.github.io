@@ -13,7 +13,23 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 
 # Insights on titles
 
+To get familiar with title features, let's do a **time series analysis** !
+
+Have the main features of movie titles changed over time?
+
+## Title length in characters
+
+Its length is the most obvious feature of a title. It can be characterized by the number of words or of characters. We analyze here the evolution of the number of characters - as it is more precise than words - over time for all movie genre and for each movie genre.
+
 {% include times-series-length-characters.html %}
+
+* The title length in characters across all genres is scattered in the early 20th century. This is due to the fact that our dataset contains very few movies released between 1906 and 1928 (less than a hundred). 
+
+* The average title length in characters across all genres is also  **fairly stable from 1928 to 2012** (very narrow confidence intervals): it remains around 17 characters.  
+
+* For movie genres with many movies per year in our dataset, we can draw some conclusions. `Romance`, `Comedy` and `Drama` have again rather equal mean length in characters and the same variations over time. Their mean length varies little around 16.7 words over time.
+
+## Conveyed sentiment
 
 The movie genre and the sentiment conveyed in its title are intertwined aspects that play a significant role in shaping audience expectations and influencing the overall cinematic experience. The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. Here's an exploration of how sentiment analysis and movie genres intersect.
 
@@ -21,32 +37,33 @@ The movie genre and the sentiment conveyed in its title are intertwined aspects 
 
 {% include genres-neg-sentiment.html %}
 
-- Titles in drama and romance genres lean towards positive or neutral sentiments to reflect the emotional and heartfelt nature of the narrative. 
+* Titles in drama and romance genres lean towards positive or neutral sentiments to reflect the emotional and heartfelt nature of the narrative. 
+* Horror and thriller titles frequently incorporate negative sentiments to create an air of suspense, mystery, or fear. The goal is to intrigue and elicit an emotional response. Example: "Psycho"
+* Sport movie titles often carry positive sentiments to reflect the themes of triumph, teamwork, and personal growth. Positive sentiments contribute to the inspirational and uplifting nature of these films.
+* Titles associated with world cinema often carry positive sentiments, emphasizing the diverse and enriching cultural experiences depicted in these films. 
+* Political movie titles may carry positive sentiments, particularly if the focus is on inspiring change, highlighting positive political movements, or celebrating leaders and figures who made a positive impact.
+* Historical movie titles may carry positive sentiments, emphasizing the inspiration from historical events, heroic figures, and significant moments.
+* Fictional movie titles may carry negative sentiments if the focus is on dystopian or dark themes.
+* Titles associated with art films often carry positive sentiments, reflecting the artistic and creative nature of these films.
 
-
-- Horror and thriller titles frequently incorporate negative sentiments to create an air of suspense, mystery, or fear. The goal is to intrigue and elicit an emotional response. Example: "Psycho"
-
-
-- Sport movie titles often carry positive sentiments to reflect the themes of triumph, teamwork, and personal growth. Positive sentiments contribute to the inspirational and uplifting nature of these films.
-
-
-- Titles associated with world cinema often carry positive sentiments, emphasizing the diverse and enriching cultural experiences depicted in these films. 
-
-
-- Political movie titles may carry positive sentiments, particularly if the focus is on inspiring change, highlighting positive political movements, or celebrating leaders and figures who made a positive impact.
-
-
-- Historical movie titles may carry positive sentiments, emphasizing the inspiration from historical events, heroic figures, and significant moments.
-
-
-- Fictional movie titles may carry negative sentiments if the focus is on dystopian or dark themes.
-
-
-- Titles associated with art films often carry positive sentiments, reflecting the artistic and creative nature of these films.
+The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. The following plot explore how positive and negative sentiment tones in title evolved over time.
 
 {% include times-series-sentiment-analysis.html %}
 
+* Movie titles convey on average the same positive and negative sentiments. The curves are intertwined throughout the time period.
+
+* Mean values for positive and negative sentiment conveyed by title after 1980 remain between 0.0 and 0.2 over time. 
+
+
+## Presence of proper nouns
+
+The presence of a protagonist name or of a specific place in a movie title could influence its success. A part-of-speech NLP analysis enables us to analyze the evolution of the presence of proper nouns over time.
+
+As only the `Person` and `Organization` proper nouns are well represented in title, only those types are kept for the analysis.
+
 {% include times-series-part-of-speech.html %}
+
+* From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person proper noun.
 
 
 # Successful titles analysis
@@ -76,14 +93,14 @@ NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Di
 {% include confounder-studios.html %}
 
 
-We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the top 50 influential directors (found on https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
+We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
 
 {% include confounder-directors.html %}
 
 
 {% include confounder-budget.html %}
 
-The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal
+The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal.
 
 {% include confounder-genres.html %}
 
