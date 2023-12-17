@@ -6,7 +6,7 @@ cover-img: /assets/img/road.jpg
 
 carousels:
   - images: 
-      - image: /assets/spotless.jpg
+      - image: /assets/img/slider/spotless.jpg
       - image: /assets/img/slider/coucou.jpg
       - image: /assets/img/slider/SilenceOfTheLambs.jpg
       - image: /assets/img/slider/HiddenFigures.jpg
@@ -14,13 +14,13 @@ carousels:
       - image: /assets/img/slider/ThereWillBeBlood.jpg
       - image: /assets/img/slider/ApocalypseNow.jpg
       - image: /assets/img/slider/Wolf.jpg
-      - image: /assets/img/slider/KillBill.jpg  
+      - image: /assets/img/slider/KillBill.jpg
+      - image: /assets/img/slider/RagingBull.jpg 
   - images: 
       - image: /assets/img/slider/Streetcar.jpg
       - image: /assets/img/slider/SpiritedAway.jpg
       - image: /assets/img/slider/Slumdog.jpg
       - image: /assets/img/slider/BackToTheFuture.jpg
-
 ---
 
 
