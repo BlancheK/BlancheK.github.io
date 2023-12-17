@@ -6,7 +6,7 @@ cover-img: /assets/img/road.jpg
 
 carousels:
   - images: 
-      - image: /assets/img/slider/spotless.jpg
+      - image: /assets/spotless.jpg
       - image: /assets/img/slider/coucou.jpg
       - image: /assets/img/slider/SilenceOfTheLambs.jpg
   - images: 
