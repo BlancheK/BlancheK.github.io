@@ -14,8 +14,7 @@ carousels:
       - image: /assets/img/slider/ThereWillBeBlood.jpg
       - image: /assets/img/slider/ApocalypseNow.jpg
       - image: /assets/img/slider/Wolf.jpg
-      - image: /assets/img/slider/KillBill.jpg
-      - image: /assets/img/slider/RagingBull.jpg   
+      - image: /assets/img/slider/KillBill.jpg  
   - images: 
       - image: /assets/img/slider/Streetcar.jpg
       - image: /assets/img/slider/SpiritedAway.jpg
