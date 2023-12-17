@@ -6,14 +6,14 @@ cover-img: /assets/img/road.jpg
 
 carousels:
   - images: 
-      - image: /assets/images/slider/spotless.jpg
-      - image: /assets/images/slider/coucou.jpg
-      - image: /assets/images/slider/SilenceOfTheLambs.jpg
+      - image: /assets/img/slider/spotless.jpg
+      - image: /assets/img/slider/coucou.jpg
+      - image: /assets/img/slider/SilenceOfTheLambs.jpg
   - images: 
-      - image: /assets/images/slider/ThereWillBeBlood.jpg
-      - image: /assets/images/slider/ApocalypseNow.jpg
-      - image: /assets/images/slider/Wolf.jpg
-      - image: /assets/images/slider/RagingBull.jpg
+      - image: /assets/img/slider/ThereWillBeBlood.jpg
+      - image: /assets/img/slider/ApocalypseNow.jpg
+      - image: /assets/img/slider/Wolf.jpg
+      - image: /assets/img/slider/RagingBull.jpg
 ---
 
 {% include movie-card.html %}
