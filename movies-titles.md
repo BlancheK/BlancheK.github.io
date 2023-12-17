@@ -119,7 +119,7 @@ It will be important to consider this confounding factor for future studies. Our
 
 We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... The reputation and track record of the movie production company can influence audience expectations. Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
 NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
-
+![image-title-here](/assets/img/studios.jpg){:class="img-responsive"}
 {% include confounder-studios.html %}
 
 
