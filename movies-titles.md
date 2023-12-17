@@ -3,6 +3,17 @@ layout: page
 title: Title to Success
 subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
+
+carousels:
+  - images: 
+      - image: /assets/images/slider/spotless.jpg
+      - image: /assets/images/slider/coucou.jpg
+      - image: /assets/images/slider/SilenceOfTheLambs.jpg
+  - images: 
+      - image: /assets/images/slider/ThereWillBeBlood.jpg
+      - image: /assets/images/slider/ApocalypseNow.jpg
+      - image: /assets/images/slider/Wolf.jpg
+      - image: /assets/images/slider/RagingBull.jpg
 ---
 
 {% include movie-card.html %}
