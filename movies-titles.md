@@ -16,7 +16,6 @@ carousels:
       - image: /assets/img/slider/RagingBull.jpg
 ---
 
-{% include movie-card.html %}
 
 
 {% include carousel.html height="50" unit="%" duration="7" number="1" %}
