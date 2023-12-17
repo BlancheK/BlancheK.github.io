@@ -3,9 +3,6 @@ layout: page
 title: Title to Success
 subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
-
----
-layout: default
 carousels:
   - images: 
       - image: /assets/img/slider/spotless.jpg
@@ -25,20 +22,15 @@ carousels:
       - image: /assets/img/slider/BackToTheFuture.jpg
 ---
 
+How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
 
+While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
 {% include carousel.html height="50" unit="%" duration="7" number="1" %}
 
 {% include carousel.html height="50" unit="%" duration="7" number="2" %}
 
 {% include carousel.html height="50" unit="%" duration="7" number="3" %}
-
-
-![image-title-here](/assets/img/slider/RagingBull.jpg){:class="img-responsive"}
-
-How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
-
-While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
 Here we seek to analyze whether the title of a movie can be linked to its **success**. We will study how explicit titles are by comparing them to plot summaries. We will examine the impact of factors like length or including the protagonist's name. Moreover, we will try to draw the different title strategies for different **movie genres**. Finally, we will do a **time series analysis**.
 
