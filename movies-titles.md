@@ -46,7 +46,7 @@ Here we seek to analyze whether the title of a movie can be linked to its **succ
 To get familiar with title features, let's do some **preliminary analysis** ! Have the main features of movie titles changed over time?By conducting a time series analysis of parameters such as title length, sentiment analysis across genres, and studying the presence of proper nouns using Natural Language Processing, we gain valuable insights on titles. This helps us identify trends and linguistic patterns that may influence a movie's popularity. we have to know if it is necessary to consider release years as potential confounders to have more accurate and nuanced analyses of the link between titles and success in the movie industry.
 
 
-## Title length in characters
+### Title length in characters
 
 Its length is the most obvious feature of a title. It can be characterized by the number of words or of characters. We analyze here the evolution of the number of characters - as it is more precise than words - over time for all movie genre and for each movie genre.
 
@@ -58,7 +58,7 @@ Its length is the most obvious feature of a title. It can be characterized by th
 
 * For movie genres with many movies per year in our dataset, we can draw some conclusions. `Romance`, `Comedy` and `Drama` have again rather equal mean length in characters and the same variations over time. Their mean length varies little around 16.7 words over time.
 
-## Conveyed sentiment
+### Conveyed sentiment
 
 The movie genre and the sentiment conveyed in its title are intertwined aspects that play a significant role in shaping audience expectations and influencing the overall cinematic experience. The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. Here's an exploration of how sentiment analysis and movie genres intersect.
 
@@ -84,7 +84,7 @@ The sentiment analysis of a movie title, whether positive, negative, or neutral,
 * Mean values for positive and negative sentiment conveyed by title after 1980 remain between 0.0 and 0.2 over time. 
 
 
-## Presence of proper nouns
+### Presence of proper nouns
 
 The presence of a protagonist name or of a specific place in a movie title could influence its success. A part-of-speech NLP analysis enables us to analyze the evolution of the presence of proper nouns over time.
 
@@ -95,16 +95,17 @@ As only the `Person` and `Organization` proper nouns are well represented in tit
 * From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person proper noun.
 
 
+
 # Successful titles analysis
 
 {% include success-indicator-distribution.html %}
 
-## Confounders of success
+### Confounders of success
 We are interested in conducting an analysis to explore the relationship between the title of a movie and its success. While the title seems to be a crucial aspect since it is a the first hook, it is undoubtable that other factors, such as the cast, director, and movie studio, may exert a more significant influence on a film's success. To gain a comprehensive understanding of the impact of the title, it is essential to analyze potential confounding variables affecting success.
 
 In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
 
-
+#### Famous actors 
 We would like to know if the presence of famous actors influence the movie success.
 
 {% include confounder-actors-v2.html %}
@@ -115,29 +116,29 @@ Our findings suggest a positive association between the presence of famous actor
 
 It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
 
-
+#### Famous movie studios 
 We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... The reputation and track record of the movie production company can influence audience expectations. Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
 NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
 ![image-title-here](/assets/img/studios.jpg){:class="img-responsive"}
 {% include confounder-studios.html %}
 
-
+#### Famous directors 
 We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
 
 ![image-title-here](/assets/img/directors.jpg){:class="img-responsive"}
 
 {% include confounder-directors.html %}
 
-
+#### Movie budget 
 {% include confounder-budget.html %}
 
 The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal.
 
 {% include confounder-genres.html %}
 
-## Key features
+### Key features
 
-### Title length
+#### Title length
 
 The length of a movie title plays a crucial role in shaping audience expectations, establishing tone, and contributing to a film's overall marketing strategy. A well-crafted title can pique curiosity, evoke emotions, and even serve as a memorable brand for the film. Whether brief and explicit or long and intriguing, a title can contribute significantly to a film's success by resonating with its target audience and conveying the essence of the cinematic experience it offers.
 
@@ -146,7 +147,7 @@ Two contrasting examples that highlight the impact of title length and style are
 
 {% include success-length-characters-heatmap.html %}
 
-### Presence of protagonist name
+#### Presence of protagonist name
 
 {% include success-protagonist.html %}
 
@@ -161,11 +162,11 @@ Examples of movies that incorporate the protagonist's name into the title includ
 
 We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
 
-### Part-of-speech : grammatical (verbs, adjective)
+#### Part-of-speech : grammatical (verbs, adjective)
 
 {% include success-grammatical-tag.html %}
 
-### Part-of-speech : proper nouns (characters, dates, location)
+#### Part-of-speech : proper nouns (characters, dates, location)
 
 {% include success-org-nouns.html %}
 
@@ -174,7 +175,7 @@ We want to investigate the lexical fields and the conotation of our titles. This
 {% include success-NER.html %}
 
 
-### Sentiment analysis
+#### Sentiment analysis
 
 A positively framed title can generate enthusiasm and attract viewers with the promise of an uplifting or enjoyable experience. For example, titles like "Happy Feet" or "The pursuit of Happiness" evoke positive emotions and may attract audiences seeking a feel-good or heartwarming cinematic experience. These titles create an expectation of positivity and may contribute to the film's success, especially if the content aligns with the sentiment conveyed by the title.
 
@@ -185,7 +186,7 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 {% include success-neg-sent-heatmap.html %}
 
-## Prediction
+### Prediction
 
 *graph qui explique comment on prend en compte ces paramètres pour la prédiction (pie chart)*
 
