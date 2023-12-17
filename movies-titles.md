@@ -185,5 +185,7 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 blablabla
 
 <img src="assets/img/hollywood.png"/>
+![image-title-here](/assets/img/hollywood.png){:class="img-responsive"}
+
 
 -------------
