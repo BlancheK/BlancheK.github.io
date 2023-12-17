@@ -100,7 +100,7 @@ As only the `Person` and `Organization` proper nouns are well represented in tit
 
 {% include success-indicator-distribution.html %}
 
-## Confounders
+## Confounders of success
 We are interested in conducting an analysis to explore the relationship between the title of a movie and its success. While the title seems to be a crucial aspect since it is a the first hook, it is undoubtable that other factors, such as the cast, director, and movie studio, may exert a more significant influence on a film's success. To gain a comprehensive understanding of the impact of the title, it is essential to analyze potential confounding variables affecting success.
 
 In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
@@ -111,7 +111,7 @@ We would like to know if the presence of famous actors influence the movie succe
 {% include confounder-actors-v2.html %}
 
 Here we are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film.  Famous actors can draw audiences based on their star power, fan following, and perceived acting skills. A well-known cast can enhance a film's marketability and contribute to its initial box office performance.
-
+![image-title-here](/assets/img/actors.jpg){:class="img-responsive"}
 Our findings suggest a positive association between the presence of famous actors and increased movie success. The number of famous actors and their chemistry on screen can also affect the film's appeal. Ensemble casts may attract a diverse audience, especially if each actor has a substantial fan base. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
 
 It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
@@ -124,6 +124,8 @@ NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Di
 
 
 We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
+
+![image-title-here](/assets/img/directors.jpg){:class="img-responsive"}
 
 {% include confounder-directors.html %}
 
