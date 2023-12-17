@@ -11,7 +11,7 @@ carousels:
       - image: /assets/img/slider/SilenceOfTheLambs.jpg
   - images: 
       - image: /assets/img/slider/ThereWillBeBlood.jpg
-      - image: /assets/img/slider/ApocalypseNow.jpg.jpg
+      - image: /assets/img/slider/ApocalypseNow.jpg
       - image: /assets/img/slider/Wolf.jpg
       - image: /assets/img/slider/RagingBull.jpg
 ---
