@@ -4,6 +4,8 @@ title: Title to Success
 subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 
+---
+layout: default
 carousels:
   - images: 
       - image: /assets/img/slider/spotless.jpg
