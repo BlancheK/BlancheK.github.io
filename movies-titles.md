@@ -14,12 +14,6 @@ carousels:
       - image: /assets/img/FunFacts/Apocalypse.jpg
       - image: /assets/img/FunFacts/TheWolf.jpg
       - image: /assets/img/FunFacts/KillBill.jpg
-      - image: /assets/img/FunFacts/RagingBull.jpg 
-  - images: 
-      - image: /assets/img/FunFacts/Streetcar.jpg
-      - image: /assets/img/FunFacts/SpiritedAway.jpg
-      - image: /assets/img/FunFacts/Slumdog.jpg
-      - image: /assets/img/FunFacts/BackToTheFuture.jpg
 ---
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
