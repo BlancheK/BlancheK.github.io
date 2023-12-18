@@ -5,21 +5,21 @@ subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 carousels:
   - images: 
-      - image: /assets/img/slider/spotless.jpg
-      - image: /assets/img/slider/coucou.jpg
-      - image: /assets/img/slider/SilenceOfTheLambs.jpg
-      - image: /assets/img/slider/HiddenFigures.jpg
+      - image: /assets/img/FunFacts/Eternal.jpg
+      - image: /assets/img/FunFacts/Coucou.jpg
+      - image: /assets/img/FunFacts/Lamb.jpg
+      - image: /assets/img/FunFacts/HiddenFigures.jpg
   - images: 
-      - image: /assets/img/slider/ThereWillBeBlood.jpg
-      - image: /assets/img/slider/ApocalypseNow.jpg
-      - image: /assets/img/slider/Wolf.jpg
-      - image: /assets/img/slider/KillBill.jpg
-      - image: /assets/img/slider/RagingBull.jpg 
+      - image: /assets/img/FunFacts/Blood.jpg
+      - image: /assets/img/FunFacts/Apocalypse.jpg
+      - image: /assets/img/FunFacts/TheWolf.jpg
+      - image: /assets/img/FunFacts/KillBill.jpg
+      - image: /assets/img/FunFacts/RagingBull.jpg 
   - images: 
-      - image: /assets/img/slider/Streetcar.jpg
-      - image: /assets/img/slider/SpiritedAway.jpg
-      - image: /assets/img/slider/Slumdog.jpg
-      - image: /assets/img/slider/BackToTheFuture.jpg
+      - image: /assets/img/FunFacts/Streetcar.jpg
+      - image: /assets/img/FunFacts/SpiritedAway.jpg
+      - image: /assets/img/FunFacts/Slumdog.jpg
+      - image: /assets/img/FunFacts/BackToTheFuture.jpg
 ---
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
