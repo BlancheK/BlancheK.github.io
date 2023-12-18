@@ -183,21 +183,21 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...). Here we tested it on movies realeased after 2012.
 
-{% Actual_vs_predicted_SI.html %}
+{% include Actual_vs_predicted_SI.html %}
 
 The predictability is very low, there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. Titles seems to have a very low influence on the Success of movies. We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of these features. 
 
-{% Pie_chart_features_contrib_title_only.html %}
+{% include Pie_chart_features_contrib_title_only.html %}
 
 The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features ùay be more discriminative but are only represented by few movies and may not appear here as important features. 
 
 To continue further our analysis we tried to look into the predictability taking into account other features not always related to the title such as the Movie runtime, the main genre, the presence of famous actors... 
 
-{% Actual_vs_predicted_SI_all.html %}
+{% include Actual_vs_predicted_SI_all.html %}
 
 The predicatbility is increased, there is a better correlation between Actual and Predicted Success indicator. Once again we also took a look at the contribution of each features to the model. This is a good first approximation of the importance of features on the success of movies.
 
-{% Pie_chart_features_contrib.html %}
+{% include Pie_chart_features_contrib.html %}
 
 # Interactive tool
 
