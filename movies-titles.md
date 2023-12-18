@@ -5,15 +5,15 @@ subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 carousels:
   - images: 
-      - image: /assets/img/FunFacts/Eternal.jpg
-      - image: /assets/img/FunFacts/Coucou.jpg
-      - image: /assets/img/FunFacts/Lamb.jpg
-      - image: /assets/img/FunFacts/HiddenFigures.jpg
+      - image: "/assets/img/FunFacts/Eternal.jpg"
+      - image: "/assets/img/FunFacts/Coucou.jpg"
+      - image: "/assets/img/FunFacts/Lamb.jpg"
+      - image: "/assets/img/FunFacts/HiddenFigures.jpg"
   - images: 
-      - image: /assets/img/FunFacts/Blood.jpg
-      - image: /assets/img/FunFacts/Apocalypse.jpg
-      - image: /assets/img/FunFacts/TheWolf.jpg
-      - image: /assets/img/FunFacts/KillBill.jpg
+      - image: "/assets/img/FunFacts/Blood.jpg"
+      - image: "/assets/img/FunFacts/Apocalypse.jpg"
+      - image: "/assets/img/FunFacts/TheWolf.jpg"
+      - image: "/assets/img/FunFacts/KillBill.jpg"
 ---
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed.
