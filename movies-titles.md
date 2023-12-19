@@ -168,9 +168,9 @@ Now let's consider the grammatical construction of titles. First, we use Part-of
 
 {% include success-grammatical-tag.html %}
 
-There is a strong success indicator for films containing adjectives, adverbs and conjunctions. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with nouns was not an artefact. When looking at each tagg occurence, there is a signifant number of nouns. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
+There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions'. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with 'nouns' was not an artefact. When looking at each tagg occurence, there is a signifant number of 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
 
-We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing adverbs is lower than other taggs categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tagg. 
+We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other taggs categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tagg. 
 
 
 #### Named Entity Recognition:
@@ -182,14 +182,13 @@ We first tried to see the influence of organisation names and persons occurences
 {% include success-org-nouns.html %}
 {% include success-person-nouns.html %}
 
-We see that the number of organisation and person items influence the success indicator. ORGANIZATION: the success is maximum for 2 Organization occurences and minimum for 3. PERSON: the success is maximum for 3 Person occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 Organizations NER or 3 Person NER might be due to a low number of occurences in the dataset, hence creating high variance.
+We see that the number of organisation and person items influence the success indicator. 'organisation': the success is maximum for 2 Organization occurences and minimum for 3. 'person': the success is maximum for 3 Person occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 Organizations NER or 3 Person NER might be due to a low number of occurences in the dataset, hence creating high variance.
 
 Instead of looking at the number of occurences of person or organization type, we can decide to compare movie titles with at least one person or one organization type. If the title contains both types, it will be considered in both categories.
 
-
-
 {% include success-NER.html %}
 
+According to this plot, having a named 'organization' or 'person' in the movie title influences the success of the movie (almost x3). We don't see much difference between the organization and the person type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'organisation' or 'person' item might be significant because of the few titles that contain more than one occurence.
 
 
 #### Presence of protagonist name
@@ -215,11 +214,25 @@ A positively framed title can generate enthusiasm and attract viewers with the p
 
 Conversely, a negatively framed title might generate intrigue or set a darker tone, potentially attracting audiences interested in suspense, thrill, or drama. Movies like "Requiem for a dream" or "No Country for Old Men" use negative sentiments in their titles to signal intense, suspenseful narratives. In these cases, the negative sentiment may contribute to the film's success by attracting audiences who appreciate more challenging or intense storytelling.
 
+
+CHANGE THE PLOTS / GRAPHS INSTEAD OF HEATMAPS 
 {% include success-pos-sent-heatmap.html %}
 
 {% include success-neg-sent-heatmap.html %}
 
+The sentiment score does not seem to have a significant influence on the success indicator. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
+
 ### Prediction
+
+#### Genre classification 
+
+A movie genre classification system was developed through two distinct but complementary approaches to predict the movie genre based on the movie title. A vocabulary lists for each genre was generated with the assistance of generative AI and a classifier was trained using movie summaries to capture genre-specific vocabulary. Movie titles were subsequently tested against this combined vocabulary for genre classification. 
+
+The accuracy of our model remained low : 6%, with a precision of 29%. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
+Movie titles are designed with the intention of catching attention and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are inherently concise, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it challenging to extract relevant genre-related information and eading to diverse genre predictions.
+
+
+#### Prediction of the movie success
 
 We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...). Here we tested it on movies realeased after 2012.
 
