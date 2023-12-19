@@ -27,11 +27,9 @@ We aim to investigate the correlation bewteen a movie title and its **success**.
 
 # Insights on titles
 
-To get familiar with title features, let's do some **preliminary analysis** ! 
+To get familiar with title features, let's do some **preliminary analysis** ! Have the main features of movie titles changed over time?
 
-Have the main features of movie titles changed over time?
-
-By conducting a time series analysis of parameters such as title length, sentiment analysis across genres, and studying the presence of proper nouns using Natural Language Processing, we gain valuable insights on titles. This helps us identify trends and linguistic patterns that may influence a movie's popularity. we have to know if it is necessary to consider release years as potential confounders to have more accurate and nuanced analyses of the link between titles and success in the movie industry.
+By conducting a time series analysis of parameters such as title length, sentiment analysis across genres, and studying the presence of proper nouns using Natural Language Processing, we gain valuable insights on titles. This helps us identify trends and linguistic patterns that may influence a movie's popularity. We indeed have to know if it is necessary to consider release years as potential confounders to have more accurate and nuanced analyses of the link between titles and success in the movie industry.
 
 
 ### Title length in characters
