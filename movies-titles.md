@@ -137,18 +137,18 @@ Visually, all these potential confounders seem to have an impact on the success.
 
 #### Multilinear regression
 
-| Confounders           | P-value            | Coefficient |
-| :---------------:     |:-------------:     | :----------:|
-| Famous actors         | $ 3.723~10^(-13) $ | $ 0.281 $ |
-| Famous movie studio   | $ 4.097~10^(-05) $ | $ 0.199 $ |
-| Famous director       | $ 1.193~10^(-06) $ | $ 0.564 $ |
-| Movie budget          | $ 7.366~10^(-24) $ | $ 0.223 $ |
+| Confounders           | P-value        | Coefficient |
+| :---------------:     |:-------------: | :----------:|
+| Famous actors         | 0.000          | 0.281       |
+| Famous movie studio   | 0.000          | 0.199       |
+| Famous director       | 0.000          | 0.564       |
+| Movie budget          | 0.000          | 0.223       |
 
 #### Kruskal-Wallis
 
-| Confounders           | P-value            |
-| :---------------:     |:-------------:     |
-| Movie genre           | $ 3.620~10^(-12) $ |
+| Confounders           | P-value       |
+| :---------------:     |:-------------:|
+| Movie genre           | 0.000         |
 
 
 The results of the test confirm our fears… All these parameters influence our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
