@@ -214,6 +214,8 @@ The sentiment score does not seem to have a significant influence on the success
 
 A movie genre classification system was developed through two distinct but complementary approaches to predict the movie genre based on the movie title. A vocabulary lists for each genre was generated with the assistance of generative AI and a classifier was trained using movie summaries to capture genre-specific vocabulary. Movie titles were subsequently tested against this combined vocabulary for genre classification. 
 
+{% include precision-recall.html %}
+
 The accuracy of our model remained low : 6%, with a precision of 29%. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
 Movie titles are designed with the intention of catching attention and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are inherently concise, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it challenging to extract relevant genre-related information and eading to diverse genre predictions.
 
