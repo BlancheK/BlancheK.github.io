@@ -104,12 +104,15 @@ Our findings suggest a positive association between the presence of famous actor
 It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
 
 #### Famous movie studios 
+
 We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... The reputation and track record of the movie production company can influence audience expectations. Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
 NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
 ![image-title-here](/assets/img/studios.jpg){:class="img-responsive"}
+
 {% include confounder-studios.html %}
 
 #### Famous directors 
+
 We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
 
 ![image-title-here](/assets/img/directors.jpg){:class="img-responsive"}
@@ -117,11 +120,39 @@ We explored the impact of renowned film directors on movie success : this analys
 {% include confounder-directors.html %}
 
 #### Movie budget 
-{% include confounder-budget.html %}
 
 The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal.
 
+{% include confounder-budget.html %}
+
+### Movie genre
+
+Is the genre of the movie crucial for its success? Depending on the public’s preference, it is reasonable to think that the general background of the movie will influence its success. The last superhero movie will surely attract more people than a documentary movie, and thus have higher revenue. Besides, a comedy movie may obtain a lot of bad rating, as humor is very personal, and it is not easy to make everyone laugh…
+
 {% include confounder-genres.html %}
+
+### What about statistical tests?
+
+Visually, all these potential confounders seem to have an impact on the success. Let’s test this hypothesis by performing statistical tests. We chose to perform multilinear regression for the movie budget, the number of famous actors, the fame of the studio and the fame of the director, and a non-parametric ANOVA 1 (Kruskal Wallis) on the genres.
+
+#### Multilinear regression
+
+| Confounders           | P-value              | Coefficient |
+| :---------------:     |:-------------:       | :----------:|
+| Famous actors         | $$ 3.723~10^(-13) $$ | $$ 0.281 $$ |
+| Famous movie studio   | $$ 4.097~10^(-05) $$ | $$ 0.199 $$ |
+| Famous director       | $$ 1.193~10^(-06) $$ | $$ 0.564 $$ |
+| Movie budget          | $$ 7.366~10^(-24) $$ | $$ 0.223 $$ |
+
+#### Kruskal-Wallis
+
+| Confounders           | P-value              |
+| :---------------:     |:-------------:       |
+| Movie genre           | $$ 3.620~10^(-12) $$ |
+
+
+The results of the test confirm our fears… All these parameters influence our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
+
 
 ### Key features
 
