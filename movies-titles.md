@@ -159,35 +159,56 @@ Two contrasting examples that highlight the impact of title length and style are
 
 {% include success-length-characters-heatmap.html %}
 
-#### Presence of protagonist name
-
-{% include success-protagonist.html %}
+We obtain a heavy tailed distribution of the number of characters in the movie titles. The plot doesn't show a correlation between the number of characters in the title and the success. 
 
 
-The inclusion of the protagonist's name in a movie title can be a strategic storytelling choice that immediately centers the narrative around a specific character. This approach serves multiple purposes in shaping audience expectations and marketing the film.
+#### Part-of-speech tagging : an insight on grammatical structure of the title (verbs, adjective)
 
-
-Firstly, featuring the protagonist's name in the title establishes a clear focal point for the audience. It signals that the story revolves around this central character, offering a glimpse into their journey, struggles, or triumphs. This clarity can attract viewers who are drawn to character-driven narratives and are interested in following the personal development of the main character. Secondly, the protagonist's name in the title provides a straightforward identifier, making it easier for audiences to recall the movie. This can be especially effective in building a franchise or series around a particular character, creating a recognizable brand.
-Examples of movies that incorporate the protagonist's name into the title include "Forrest Gump," , "Rocky",“Annie Hall”, “John Wick” …
-
-
-
-We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
-
-#### Part-of-speech : grammatical (verbs, adjective)
+Now let's consider the grammatical construction of titles. First, we use Part-of-speech tagging to uncover the potential influence of certain parts of speech such as verbs, adjectives, nouns...
 
 {% include success-grammatical-tag.html %}
 
-#### Part-of-speech : proper nouns (characters, dates, location)
+There is a strong success indicator for films containing adjectives, adverbs and conjunctions. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with nouns was not an artefact. When looking at each tagg occurence, there is a signifant number of nouns. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
+
+We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing adverbs is lower than other taggs categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tagg. 
+
+
+#### Named Entity Recognition:
+
+The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having Person, Location of Date objects in the title on success.
+
+We first tried to see the influence of organisation names and persons occurences on the movie success. 
 
 {% include success-org-nouns.html %}
-
 {% include success-person-nouns.html %}
+
+We see that the number of organisation and person items influence the success indicator. ORGANIZATION: the success is maximum for 2 Organization occurences and minimum for 3. PERSON: the success is maximum for 3 Person occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 Organizations NER or 3 Person NER might be due to a low number of occurences in the dataset, hence creating high variance.
+
+Instead of looking at the number of occurences of person or organization type, we can decide to compare movie titles with at least one person or one organization type. If the title contains both types, it will be considered in both categories.
+
+
 
 {% include success-NER.html %}
 
 
+
+#### Presence of protagonist name
+
+
+Featuring the protagonist's name in the title establishes a clear focal point for the audience. It signals that the story revolves around this central character, offering a glimpse into their journey, struggles, or triumphs. This clarity can attract viewers who are drawn to character-driven narratives and are interested in following the personal development of the main character. Secondly, the protagonist's name in the title provides a straightforward identifier, making it easier for audiences to recall the movie. This can be especially effective in building a franchise or series around a particular character, creating a recognizable brand.
+Examples of movies that incorporate the protagonist's name into the title include "Forrest Gump," , "Rocky",“Annie Hall”, “John Wick” …
+
+
+{% include success-protagonist.html %}
+
+
+Based on this plot, the presence of the protagonist name in the title is associated with a lower success. Movie titles that explicitly mention the protagonist's name may reveal too much about the plot, leaving little room for audience curiosity, or on the contrary not tell enough about the movie theme. This is surprising but it will have not be very important since only negligeable part of the movies (49/2412 = 0.2%) have the protagonist name in the title, and it might bring too much variance to our analysis. 
+
+
+
 #### Sentiment analysis
+
+We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
 
 A positively framed title can generate enthusiasm and attract viewers with the promise of an uplifting or enjoyable experience. For example, titles like "Happy Feet" or "The pursuit of Happiness" evoke positive emotions and may attract audiences seeking a feel-good or heartwarming cinematic experience. These titles create an expectation of positivity and may contribute to the film's success, especially if the content aligns with the sentiment conveyed by the title.
 
