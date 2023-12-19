@@ -17,18 +17,6 @@ common-ext-js:
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 common-js:
   - "/assets/js/beautifuljekyll.js"
-
-carousels:
-  - images: 
-      - image: /assets/img/FunFacts/Eternal.jpg
-      - image: /assets/img/FunFacts/Coucou.jpg
-      - image: /assets/img/FunFacts/Lamb.jpg
-      - image: /assets/img/FunFacts/HiddenFigures.jpg
-  - images: 
-      - image: /assets/img/FunFacts/Blood.jpg
-      - image: /assets/img/FunFacts/Apocalypse.jpg
-      - image: /assets/img/FunFacts/TheWolf.jpg
-      - image: /assets/img/FunFacts/KillBill.jpg
 ---
 
 <!DOCTYPE html>
@@ -42,10 +30,6 @@ carousels:
   {% include nav.html %}
 
   {{ content }}
-  
-  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
-
-  {% include carousel.html height="50" unit="%" duration="7" number="2" %}
 
   {% include footer.html %}
 
