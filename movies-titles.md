@@ -135,6 +135,21 @@ Is the genre of the movie crucial for its success? Depending on the public’s p
 
 Visually, all these potential confounders seem to have an impact on the success. Let’s test this hypothesis by performing statistical tests. We chose to perform multilinear regression for the movie budget, the number of famous actors, the fame of the studio and the fame of the director, and a non-parametric ANOVA 1 (Kruskal Wallis) on the genres.
 
+#### Multilinear regression
+
+| Confounders           | P-value        | Coefficient |
+| :---------------:     |:-------------: | :----------:|
+| Famous actors         | 0.000          | 0.281       |
+| Famous movie studio   | 0.000          | 0.199       |
+| Famous director       | 0.000          | 0.564       |
+| Movie budget          | 0.000          | 0.223       |
+
+#### Kruskal-Wallis
+
+| Confounders           | P-value       |
+| :---------------:     |:-------------:|
+| Movie genre           | 0.000         |
+
 
 The results of the test confirm our fears… All these parameters influence our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
 
