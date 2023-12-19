@@ -90,7 +90,7 @@ In this context, success is measured by both the movie revenue (box office earni
 #### Famous actors 
 We would like to know if the presence of famous actors influence the movie success.
 
-{% include confounder-actors-v2.html %}
+{% include confounder-actors.html %}
 
 Here we are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film.  Famous actors can draw audiences based on their star power, fan following, and perceived acting skills. A well-known cast can enhance a film's marketability and contribute to its initial box office performance.
 ![image-title-here](/assets/img/actors.jpg){:class="img-responsive"}
@@ -173,14 +173,11 @@ The inclusion of a named entity in a movie title can be a strategic storytelling
 
 We first tried to see the influence of organisation names and persons occurences on the movie success. 
 
-{% include success-org-nouns.html %}
-{% include success-person-nouns.html %}
+{% include success-org-pers-ner.html %}
 
 We see that the number of organisation and person items influence the success indicator. 'organisation': the success is maximum for 2 Organization occurences and minimum for 3. 'person': the success is maximum for 3 Person occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 Organizations NER or 3 Person NER might be due to a low number of occurences in the dataset, hence creating high variance.
 
 Instead of looking at the number of occurences of person or organization type, we can decide to compare movie titles with at least one person or one organization type. If the title contains both types, it will be considered in both categories.
-
-{% include success-NER.html %}
 
 According to this plot, having a named 'organization' or 'person' in the movie title influences the success of the movie (almost x3). We don't see much difference between the organization and the person type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'organisation' or 'person' item might be significant because of the few titles that contain more than one occurence.
 
@@ -208,11 +205,7 @@ A positively framed title can generate enthusiasm and attract viewers with the p
 
 Conversely, a negatively framed title might generate intrigue or set a darker tone, potentially attracting audiences interested in suspense, thrill, or drama. Movies like "Requiem for a dream" or "No Country for Old Men" use negative sentiments in their titles to signal intense, suspenseful narratives. In these cases, the negative sentiment may contribute to the film's success by attracting audiences who appreciate more challenging or intense storytelling.
 
-
-CHANGE THE PLOTS / GRAPHS INSTEAD OF HEATMAPS 
-{% include success-pos-sent-heatmap.html %}
-
-{% include success-neg-sent-heatmap.html %}
+{% include success-sentiments.html %}
 
 The sentiment score does not seem to have a significant influence on the success indicator. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
 
