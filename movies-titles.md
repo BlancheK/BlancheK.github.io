@@ -130,12 +130,7 @@ Visually, all these potential confounders showed great impact on the success. Le
 
 **Multilinear regression**
 
-![image-title-here](/assets/img/Confounders_mlr.png){:class="img-responsive"}
-
-**Kruskal-Wallis**
-
-![image-title-here](/assets/img/Confounder_KW.png){:class="img-responsive"}
-
+![image-title-here](/assets/img/Confounders.png){:class="img-responsive"}
 
 The results of these tests confirm our fears… All these parameters influence significantly our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
 
