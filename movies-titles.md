@@ -14,10 +14,6 @@ carousel_images:
 ---
 
 
-
-
-{% include image_carousel.html %}
-
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed. While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
 {% include slider_carousel.html %}
@@ -78,7 +74,7 @@ As only the `Person` and `Organization` proper nouns are well represented in tit
 
 # Successful titles analysis
 
-To dig into the impact of the title on a movie's success, we first need a success indicator. We suggest that the success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. Accordingly to this, the indicator of success is calculated thanks to our additional dataset.
+To dig into the impact of the title on a movie's success, we first need a success indicator. We suggest that the success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMdB. Accordingly to this, the indicator of success is calculated thanks to our additional dataset.
 
 {% include success-indicator-distribution.html %}
 
@@ -234,7 +230,7 @@ The predictability is very low, there is no correlation between the Predicted Su
 
 {% include Pie_chart_features_contrib_title_only.html %}
 
-The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features ùay be more discriminative but are only represented by few movies and may not appear here as important features. 
+The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and may not appear here as important features. 
 
 To continue further our analysis we tried to look into the predictability taking into account other features not always related to the title such as the Movie runtime, the main genre, the presence of famous actors... 
 
