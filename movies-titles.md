@@ -19,7 +19,7 @@ We aim to investigate the correlation bewteen a movie title and its **success**.
 
 To get familiar with title features, let's do some **preliminary analysis** ! Have the main features of movie titles changed over time?
 
-By conducting a time series analysis of parameters such as title length, sentiment analysis across genres, and studying the presence of proper nouns using Natural Language Processing, we gain valuable insights on titles. This helps us identify trends and linguistic patterns that may influence a movie's popularity. We indeed have to know if it is necessary to consider release years as potential confounders to have more accurate and nuanced analyses of the link between titles and success in the movie industry.
+By conducting a time series analysis of parameters such as title length, sentiment analysis across genres, and studying the presence of named entities using Natural Language Processing, we can gain valuable insights on titles. This helps us identify trends and linguistic patterns that may influence a movie's popularity. We also have to know if it is necessary to consider release years as potential confounders to have more accurate and nuanced analyses of the link between titles and success in the movie industry.
 
 
 ### Title length in characters
@@ -42,10 +42,11 @@ The movie genre and the sentiment conveyed in its title are intertwined aspects 
 
 {% include genres-neg-sentiment.html %}
 
-* Titles in 'Drama' and 'Romance' genres lean towards positive or neutral sentiments to reflect the emotional and heartfelt nature of the narrative. 'Sport' movie titles often carry positive sentiments to reflect the themes of triumph, teamwork, and personal growth.  Titles associated with 'World cinema' often carry positive sentiments, emphasizing the diverse and enriching cultural experiences depicted in these films. 'Political' movie titles may carry positive sentiments, particularly if the focus is on inspiring change, highlighting positive political movements, or celebrating leaders and figures who made a positive impact.'Historical' movie titles may carry positive sentiments, emphasizing the inspiration from historical events, heroic figures, and significant moments. Titles associated with 'Art' films often carry positive sentiments, reflecting the artistic and creative nature of these films.
-* 'Horror' and 'thriller' titles frequently incorporate negative sentiments to create an air of suspense, mystery, or fear. The goal is to intrigue and elicit an emotional response (for instance "Psycho"). 'Fiction' movie titles may carry negative sentiments if the focus is on dystopian or dark themes .
+* Titles in `Drama` and `Romance` genres lean towards positive or neutral sentiments to reflect the emotional and heartfelt nature of the narrative. `Sport` movie titles often carry positive sentiments to reflect the themes of triumph, teamwork, and personal growth.  Titles associated with `World cinema` often carry positive sentiments, emphasizing the diverse and enriching cultural experiences depicted in these films. `Political` movie titles may carry positive sentiments, particularly if the focus is on inspiring change, highlighting positive political movements, or celebrating leaders and figures who made a positive impact.`Historical` movie titles may carry positive sentiments, emphasizing the inspiration from historical events, heroic figures, and significant moments. Titles associated with `Art` films often carry positive sentiments, reflecting the artistic and creative nature of these films.
+* `Horror` and `Thriller` titles frequently incorporate negative sentiments to create an air of suspense, mystery, or fear. The goal is to intrigue and elicit an emotional response (for instance "Psycho"). `Fiction` movie titles may carry negative sentiments if the focus is on dystopian or dark themes.
 
-The sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. The following plot explore how positive and negative sentiment tones in title evolved over time.
+We can see that the sentiment analysis of a movie title, whether positive, negative, or neutral, often aligns with the thematic tone of the film within its respective genre. 
+The following plot explore how positive and negative sentiment tones in title evolved over time.
 
 {% include times-series-sentiment-analysis.html %}
 
@@ -54,9 +55,9 @@ The sentiment analysis of a movie title, whether positive, negative, or neutral,
 * Mean values for positive and negative sentiment conveyed by title after 1980 remain between 0.0 and 0.2 over time. 
 
 
-### Presence of proper nouns
+### Presence of named entities
 
-The presence of a protagonist name or of a specific place in a movie title could influence its success. A part-of-speech NLP analysis enables us to analyze the evolution of the presence of proper nouns over time.
+The presence of a protagonist name or of a specific place in a movie title could influence its success. A part-of-speech NLP analysis enables us to analyze the evolution of the presence of named entities over time.
 
 As only the `Person` and `Organization` proper nouns are well represented in title, only those types are kept for the analysis.
 
@@ -136,6 +137,8 @@ The results of these tests confirm our fears… All these parameters influence s
 
 ## Key features
 
+We delve into the analysis of key title features, including length, grammatical structure, named entities, and the presence of the protagonist's name, aiming to discern their potential impact on a movie's success. By scrutinizing these parameters, we seek to uncover patterns and correlations that contribute to the overall success of a film.
+
 ### Title length
 
 The length of a movie title plays a crucial role in shaping audience expectations, establishing tone, and contributing to a film's overall marketing strategy. A well-crafted title can pique curiosity, evoke emotions, and even serve as a memorable brand for the film. Whether brief and explicit or long and intriguing, a title can contribute significantly to a film's success by resonating with its target audience and conveying the essence of the cinematic experience it offers.
@@ -145,12 +148,12 @@ Two contrasting examples that highlight the impact of title length and style are
 
 {% include success-length-characters-heatmap.html %}
 
-We obtain a heavy tailed distribution of the number of characters in the movie titles. The plot doesn't show a correlation between the number of characters in the title and the success. 
+Upon plotting the number of characters in movie titles against the success of the movies, we observe a heavy-tailed distribution, and no discernible correlation. This suggests that the length of movie titles, in terms of character count, does not inherently influence their level of success.
 
 
 ### Part-of-speech tagging : an insight on grammatical structure of the title (verbs, adjective)
 
-Now let's consider the grammatical construction of titles. First, we use Part-of-speech tagging to uncover the potential influence of certain parts of speech such as verbs, adjectives, nouns...
+Moving on to the grammatical construction of titles and its association with movie success, we use Part-of-Speech tagging. This analysis helps us unravel the potential impact of specific parts of speech, including verbs, adjectives, nouns, and more, on the overall success of the movie.
 
 {% include success-grammatical-tag.html %}
 
@@ -235,7 +238,9 @@ The predicatbility is increased, there is a better correlation between Actual an
 {% include Pie_chart_features_contrib.html %}
 
 
+## Conclusion 
 
+The complexity of predicting a movie's success arises from the multifaceted nature of the movie industry. While a title can capture attention and generate initial interest or lasting memories, it is often overshadowed by several influential factors. Renowned actors, considerable movie production studio and famous directors bring a built-in audience, enhancing the film's marketability. Moreover, intrinsic movie features, such as runtime, release date, the countries it reaches, and its genre, contribute significantly to its reception. Therefore, the success of a movie is a complex outcome influenced by various factors, with the title being just one aspect amid a more intricate interplay of elements.
 
 ![image-title-here](/assets/img/hollywood.png){:class="img-responsive"}
 
