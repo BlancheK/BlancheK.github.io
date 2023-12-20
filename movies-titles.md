@@ -15,11 +15,11 @@ carousels:
       - image: /assets/img/FunFacts/TheWolf.jpg
       - image: /assets/img/FunFacts/KillBill.jpg
 carousel_images:
-  - url: /assets/img/carousel/image1.jpg
+  - url: /assets/img/FunFacts/Eternal.jpg
     alt: Image 1
-  - url: /assets/img/carousel/image2.jpg
+  - url: /assets/img/FunFacts/Coucou.jpg
     alt: Image 2
-  - url: /assets/img/carousel/image3.jpg
+  - url: /assets/img/FunFacts/Lamb.jpg
     alt: Image 3
 ---
 
