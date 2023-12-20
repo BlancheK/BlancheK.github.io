@@ -1,28 +1,8 @@
 ---
 layout: base
 
-carousels:
-  - images: 
-      - image: /assets/img/FunFacts/Eternal.jpg
-      - image: /assets/img/FunFacts/Coucou.jpg
-      - image: /assets/img/FunFacts/Lamb.jpg
-      - image: /assets/img/FunFacts/HiddenFigures.jpg
-  - images: 
-      - image: /assets/img/FunFacts/Blood.jpg
-      - image: /assets/img/FunFacts/Apocalypse.jpg
-      - image: /assets/img/FunFacts/TheWolf.jpg
-      - image: /assets/img/FunFacts/KillBill.jpg
-      - image: /assets/img/FunFacts/RagingBull.jpg 
-  - images: 
-      - image: /assets/img/FunFacts/Streetcar.jpg
-      - image: /assets/img/FunFacts/SpiritedAway.jpg
-      - image: /assets/img/FunFacts/Slumdog.jpg
-      - image: /assets/img/FunFacts/BackToTheFuture.jpg
 ---
 
-{% include carousel.html height="50" unit="%" duration="7" number="1" %}
-
-{% include carousel.html height="50" unit="%" duration="7" number="2" %}
 
 
 <div class="intro-header"></div>
@@ -37,6 +17,8 @@ carousels:
   {% endif %}
 
   {{ content }}
+
+  {% include image_carousel.html %}
 
   {% if page.after-content %}
     <div class="after-content">
