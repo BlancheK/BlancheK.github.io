@@ -20,10 +20,9 @@ How is a movie title designed? A movie title is the first thing we discover abou
 
 <div class="carousel">
     <div class="carousel-track">
-        <div class="carousel-slide"><img src="/assets/img/FunFacts/Eternal.jpg" alt="Slide 1"></div>
-        <div class="carousel-slide"><img src="/assets/img/FunFacts/Coucou.jpg" alt="Slide 2"></div>
-        <div class="carousel-slide"><img src="/assets/img/FunFacts/Lamb.jpg" alt="Slide 3"></div>
-        <!-- Add more slides as needed -->
+        <li class="carousel__slide" style="background-image: url('/assets/img/FunFacts/Eternal.jpg');">
+        <li  class="carousel-slide" style="background-image: url(/assets/img/FunFacts/Coucou.jpg" alt="Slide 2">
+        <li  class="carousel-slide" style="background-image: url("/assets/img/FunFacts/Lamb.jpg" alt="Slide 3">
     </div>
     <button class="carousel-prev">Previous</button>
     <button class="carousel-next">Next</button>
