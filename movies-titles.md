@@ -247,7 +247,9 @@ The complexity of predicting a movie's success arises from the multifaceted natu
 
 
 ![image-title-here](/assets/img/designers.png){:class="img-responsive"}
+We found the 2023 net worth of title designers, the most important being those of Kyle Cooper (Spider Man), Pablo Ferro (Dr. Strangelove) and Maurice Binder (James Bond). Our study suggest that movie producers may find more substantial returns by investing in stellar actors, accomplished directors, and other critical features. 
 
+Still, some titles will forever remain in our memory. Now you know more about movie road to success !
 
 ![image-title-here](/assets/img/hollywood.png){:class="img-responsive"}
 
