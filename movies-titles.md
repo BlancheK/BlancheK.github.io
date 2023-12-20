@@ -14,7 +14,13 @@ carousels:
       - image: /assets/img/FunFacts/Apocalypse.jpg
       - image: /assets/img/FunFacts/TheWolf.jpg
       - image: /assets/img/FunFacts/KillBill.jpg
-
+carousel_images:
+  - url: /assets/img/carousel/image1.jpg
+    alt: Image 1
+  - url: /assets/img/carousel/image2.jpg
+    alt: Image 2
+  - url: /assets/img/carousel/image3.jpg
+    alt: Image 3
 ---
 
 
