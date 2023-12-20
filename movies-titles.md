@@ -78,70 +78,80 @@ As only the `Person` and `Organization` proper nouns are well represented in tit
 
 # Successful titles analysis
 
+To dig into the impact of the title on a movie's success, we first need a success indicator. We suggest that the success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. Accordingly to this, the indicator of success is calculated thanks to our additional dataset.
+
 {% include success-indicator-distribution.html %}
 
-### Confounders of success
-We are interested in conducting an analysis to explore the relationship between the title of a movie and its success. While the title seems to be a crucial aspect since it is a the first hook, it is undoubtable that other factors, such as the cast, director, and movie studio, may exert a more significant influence on a film's success. To gain a comprehensive understanding of the impact of the title, it is essential to analyze potential confounding variables affecting success.
+## Confounders of success
+We are interested in conducting an analysis to explore the relationship between the title of a movie and its success. While the title seems to be a crucial aspect since it is a the first hook, it is undoubtable that other factors, such as the cast, the director, the movie studio, the budget or the movie genre may exert a more significant influence on a film's success. To obtain a knowledgeable understanding of the impact of the title, it is essential to analyze potential confounding variables affecting success. 
 
-In this context, success is measured by both the movie revenue (box office earnings minus budget) and the ratings from IMDb. To do so, an indicator of success is calculated.
+Here, we firstly give a visual representation of some potential confounders, and then assess their weight in a movie's success by performing statistical test
+
 
 #### Famous actors 
-We would like to know if the presence of famous actors influence the movie success.
+We are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film.  Famous actors can draw audiences based on their star power, fan following, or their acting skills. A well-known cast can enhance a film's marketability and contribute to its initial box office performance.
+![image-title-here](/assets/img/actors.jpg){:class="img-responsive"}
 
 {% include confounder-actors.html %}
 
-Here we are studying the influence of the cast on a movie's success, specifically exploring whether the number of renowned actors correlates with heightened success in a film.  Famous actors can draw audiences based on their star power, fan following, and perceived acting skills. A well-known cast can enhance a film's marketability and contribute to its initial box office performance.
-![image-title-here](/assets/img/actors.jpg){:class="img-responsive"}
-Our findings suggest a positive association between the presence of famous actors and increased movie success. The number of famous actors and their chemistry on screen can also affect the film's appeal. Ensemble casts may attract a diverse audience, especially if each actor has a substantial fan base. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
-
-It will be important to consider this confounding factor for future studies. Our upcoming investigations will extend beyond to explore additional factors, including the movie production studio, the director influence, and the budget.
+Our findings suggest a positive correlation between the presence of famous actors and increased movie success. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
 
 #### Famous movie studios 
 
-We would like to know whether the fact that a movie was producted by a famous studio influences the success of a movie. The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... The reputation and track record of the movie production company can influence audience expectations. Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
+The influence of a famous studio on the success of a movie is a multifaceted topic that involves various aspects of the film industry : brand recognition, financial backing, marketing, promotion, distribution and industrial networks... Established production companies with a history of successful films may attract more attention and generate anticipation for their projects.
+
 NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Disney Studios, Sony Pictures, RKO Pictures, United Artists, Metro-Goldwyn-Mayer, 20th Century Fox are the studios considered as the best studios today and also as the best ones over the last century.
 ![image-title-here](/assets/img/studios.jpg){:class="img-responsive"}
 
 {% include confounder-studios.html %}
 
+Our result seems to clearly attribute an advantage for movies produced by famous studios. This may confirm our naive hypothesis that the production studio is another confounder to take into account for our further analysis.
+
 #### Famous directors 
 
-We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the success of the films they helm.  Director's reputation and fame can significantly influence a film's success. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work. We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
+We explored the impact of renowned film directors on movie success : this analysis aims to uncover insights into how distinguished directors contribute to the movie revenue and ratings. Directors known for their artistic vision, storytelling prowess, or box office track record may attract audiences who have come to associate quality with their work.
+ We selected a list of the [top 50 influential directors](https://thecinemaarchives.com/2020/08/17/the-250-best-directors-of-all-time/) and analyse the influence on the success of the movies helmed by those directors.
 
 ![image-title-here](/assets/img/directors.jpg){:class="img-responsive"}
 
 {% include confounder-directors.html %}
 
+Movies produced by the top 50 influential directors have a higher average success indicator, compare to other movies. Whether links to cinematographic quality or to pure commercial and trend effects, the director of a movie seems to influence its success, and might be added to the list of significant confounders.
+
 #### Movie budget 
 
-The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal.
+The budget of a movie affects its production quality, scale, and marketing efforts. A higher budget can allow for top-notch production values, impressive special effects, and extensive promotional campaigns. Blockbusters like "Avatar" (2009) with a high budget demonstrated how substantial financial investments can lead to groundbreaking visuals and widespread appeal. For all these reasons, the budget of a movie might have a crucial weight in our success indicator.
 
 {% include confounder-budget.html %}
 
-### Movie genre
+It appears that there is an potential positve correlation between movie's budget and the movie's success indicator. However, we need to dig into the data and the statistical relevance of the correlation to confirm the confounding effect of the budget. 
 
-Is the genre of the movie crucial for its success? Depending on the public’s preference, it is reasonable to think that the general background of the movie will influence its success. The last superhero movie will surely attract more people than a documentary movie, and thus have higher revenue. Besides, a comedy movie may obtain a lot of bad rating, as humor is very personal, and it is not easy to make everyone laugh…
+#### Movie genre
+
+Is the genre of the movie crucial for its success? Depending on the public’s preference, it is reasonable to think that the general background of the movie will influence its success. The last superhero movie will surely attract more people than a documentary movie, and thus have higher box office income. Besides, a comedy movie may obtain a lot of bad rating, as humor is very personal, and it is not easy to make everyone laugh…
 
 {% include confounder-genres.html %}
 
+Again, we might have found another confounder. Average success indicators seems to be considerably impacted by the genre. Because of the high variability of some groups, deeper analysis have to be realized on our data.
+
 ### What about statistical tests?
 
-Visually, all these potential confounders seem to have an impact on the success. Let’s test this hypothesis by performing statistical tests. We chose to perform multilinear regression for the movie budget, the number of famous actors, the fame of the studio and the fame of the director, and a non-parametric ANOVA 1 (Kruskal Wallis) on the genres.
+Visually, all these potential confounders showed great impact on the success. Let’s test this hypothesis. We chose to perform multilinear regression for the movie budget, the number of famous actors, the fame of the studio and the fame of the director, and a non-parametric ANOVA 1 (Kruskal Wallis) for the genres.
 
-#### Multilinear regression
+**Multilinear regression**
 
 ![image-title-here](/assets/img/Confounders_mlr.png){:class="img-responsive"}
 
-#### Kruskal-Wallis
+**Kruskal-Wallis**
 
 ![image-title-here](/assets/img/Confounder_KW.png){:class="img-responsive"}
 
 
-The results of the test confirm our fears… All these parameters influence our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
+The results of these tests confirm our fears… All these parameters influence significantly our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
 
-### Key features
+## Key features
 
-#### Title length
+### Title length
 
 The length of a movie title plays a crucial role in shaping audience expectations, establishing tone, and contributing to a film's overall marketing strategy. A well-crafted title can pique curiosity, evoke emotions, and even serve as a memorable brand for the film. Whether brief and explicit or long and intriguing, a title can contribute significantly to a film's success by resonating with its target audience and conveying the essence of the cinematic experience it offers.
 
@@ -153,7 +163,7 @@ Two contrasting examples that highlight the impact of title length and style are
 We obtain a heavy tailed distribution of the number of characters in the movie titles. The plot doesn't show a correlation between the number of characters in the title and the success. 
 
 
-#### Part-of-speech tagging : an insight on grammatical structure of the title (verbs, adjective)
+### Part-of-speech tagging : an insight on grammatical structure of the title (verbs, adjective)
 
 Now let's consider the grammatical construction of titles. First, we use Part-of-speech tagging to uncover the potential influence of certain parts of speech such as verbs, adjectives, nouns...
 
@@ -164,7 +174,7 @@ There is a strong success indicator for films containing 'adjectives', 'adverbs'
 We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other taggs categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tagg. 
 
 
-#### Named Entity Recognition:
+### Named Entity Recognition:
 
 The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having Person, Location of Date objects in the title on success.
 
@@ -179,7 +189,7 @@ Instead of looking at the number of occurences of person or organization type, w
 According to this plot, having a named 'organization' or 'person' in the movie title influences the success of the movie (almost x3). We don't see much difference between the organization and the person type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'organisation' or 'person' item might be significant because of the few titles that contain more than one occurence.
 
 
-#### Presence of protagonist name
+### Presence of protagonist name
 
 
 Featuring the protagonist's name in the title establishes a clear focal point for the audience. It signals that the story revolves around this central character, offering a glimpse into their journey, struggles, or triumphs. This clarity can attract viewers who are drawn to character-driven narratives and are interested in following the personal development of the main character. Secondly, the protagonist's name in the title provides a straightforward identifier, making it easier for audiences to recall the movie. This can be especially effective in building a franchise or series around a particular character, creating a recognizable brand.
@@ -193,7 +203,7 @@ Based on this plot, the presence of the protagonist name in the title is associa
 
 
 
-#### Sentiment analysis
+### Sentiment analysis
 
 We want to investigate the lexical fields and the conotation of our titles. This would provide us useful information to link with success, time, genre. We make the naive assumption that darker, scarier movies are associated with negative sentiments, whereas comedy and romance films are associated with more positive sentiments.
 
@@ -206,21 +216,21 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 The sentiment score does not seem to have a significant influence on the success indicator. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
 
-### Prediction
+## Prediction
 
-#### Genre classification 
+### Genre classification 
 
 A movie genre classification system was developed through two distinct but complementary approaches to predict the movie genre based on the movie title. A vocabulary lists for each genre was generated with the assistance of generative AI and a classifier was trained using movie summaries to capture genre-specific vocabulary. Movie titles were subsequently tested against this combined vocabulary for genre classification. 
 
 {% include precision-recall.html %}
 
-{% include precision-recall-0-1 %}
+{% include precision-recall-0-1.html %}
 
 The accuracy of our model remained low : 6%, with a precision of 29%. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
 Movie titles are designed with the intention of catching attention and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are inherently concise, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it challenging to extract relevant genre-related information and eading to diverse genre predictions.
 
 
-#### Prediction of the movie success
+### Prediction of the movie success
 
 We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...). Here we tested it on movies realeased after 2012.
 
