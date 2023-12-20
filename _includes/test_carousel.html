@@ -1,0 +1,42 @@
+<div class="carousel">
+  <div class="carousel-track">
+      <div class="carousel__slide"><img src="/assets/img/FunFacts/Eternal.jpg" alt="Slide 1"></div>
+      <div  class="carousel-slide"><img src="/assets/img/FunFacts/Coucou.jpg" alt="Slide 2"></div>
+      <div  class="carousel-slide"><img src="/assets/img/FunFacts/Lamb.jpg" alt="Slide 3"></div>
+  </div>
+  <button class="carousel-prev">Previous</button>
+  <button class="carousel-next">Next</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const track = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevButton = document.querySelector('.carousel-prev');
+      const nextButton = document.querySelector('.carousel-next');
+      let currentIndex = 0;
+
+      function updateCarousel() {
+          const newTransformValue = -currentIndex * 100 + '%';
+          track.style.transform = 'translateX(' + newTransformValue + ')';
+      }
+
+      function showSlide(index) {
+          currentIndex = index;
+          updateCarousel();
+      }
+
+      function showNextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+      }
+
+      function showPrevSlide() {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel();
+      }
+
+      nextButton.addEventListener('click', showNextSlide);
+      prevButton.addEventListener('click', showPrevSlide);
+  });
+</script>
