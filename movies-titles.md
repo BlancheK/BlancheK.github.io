@@ -138,8 +138,6 @@ Again, we might have found another confounder. Average success indicators seems 
 
 Visually, all these potential confounders showed great impact on the success. Let’s test this hypothesis. We chose to perform multilinear regression for the movie budget, the number of famous actors, the fame of the studio and the fame of the director, and a non-parametric ANOVA 1 (Kruskal Wallis) for the genres.
 
-**Multilinear regression**
-
 ![image-title-here](/assets/img/Confounders.png){:class="img-responsive"}
 
 The results of these tests confirm our fears… All these parameters influence significantly our success indicator! Matching the dataset is not possible in this case, as it required a binary condition for success (treated and non-treated group). Thus, we should keep in mind these confounders for our further analysis and be careful with our conclusions.
