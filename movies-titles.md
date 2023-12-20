@@ -245,6 +245,10 @@ The predicatbility is increased, there is a better correlation between Actual an
 
 The complexity of predicting a movie's success arises from the multifaceted nature of the movie industry. While a title can capture attention and generate initial interest or lasting memories, it is often overshadowed by several influential factors. Renowned actors, considerable movie production studio and famous directors bring a built-in audience, enhancing the film's marketability. Moreover, intrinsic movie features, such as runtime, release date, the countries it reaches, and its genre, contribute significantly to its reception. Therefore, the success of a movie is a complex outcome influenced by various factors, with the title being just one aspect amid a more intricate interplay of elements.
 
+
+![image-title-here](/assets/img/designers.png){:class="img-responsive"}
+
+
 ![image-title-here](/assets/img/hollywood.png){:class="img-responsive"}
 
 
