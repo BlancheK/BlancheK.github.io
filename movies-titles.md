@@ -13,7 +13,7 @@ carousel_images:
     alt: Image 3
 ---
 
-{% include image_carousel.html %}
+{% include slider_carousel.html %}
 
 
 
