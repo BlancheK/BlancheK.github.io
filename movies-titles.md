@@ -14,6 +14,7 @@ carousel_images:
 ---
 
 {% include slider_carousel.html %}
+{% include carousel.html %}
 
 
 
