@@ -231,7 +231,7 @@ We first wanted to have a look at how the features of a the title could contribu
 
 {% include Actual_vs_predicted_SI_after2012.html %}
 
-The predictability is very low, there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. Titles seems to have a very low influence on the Success of movies. We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of these features. 
+The predictability is very low (mean squarred error = 0.89 for movies before 2012), there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. Titles seems to have a very low influence on the Success of movies. We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of these features. 
 
 {% include Pie_chart_features_contrib_title_only.html %}
 
@@ -241,7 +241,7 @@ To continue further our analysis we tried to look into the predictability taking
 
 {% include Actual_vs_predicted_SI_all.html %}
 
-The preditability is increased by taking into account other features not included in the title, but still remains low. Among these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are among the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs).
+The preditability is increased by taking into account other features not included in the title, but still remains low (mean squarred error = 0.74). Among these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are among the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs).
 
 {% include Pie_chart_features_contrib.html %}
 
