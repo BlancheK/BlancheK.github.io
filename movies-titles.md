@@ -5,11 +5,11 @@ subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 
 carousel_images:
-  - url: /assets/img/FunFacts/Eternal.jpg
+  - url: /img/Eternal.jpg
     alt: Image 1
-  - url: /assets/img/FunFacts/Coucou.jpg
+  - url: /img/FunFacts/Coucou.jpg
     alt: Image 2
-  - url: /assets/img/FunFacts/Lamb.jpg
+  - url: /img/FunFacts/Lamb.jpg
     alt: Image 3
 ---
 
