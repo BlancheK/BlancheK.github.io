@@ -225,21 +225,23 @@ Movie titles are designed with the intention of catching attention and providing
 
 ### Prediction of the movie success
 
-We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...). Here we tested it on movies realeased after 2012.
+We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...) We choosed the main features from our key features analysis about titles we only removed the few one that had a different value in very few movies (such as Interjections as disucssed before), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (first graph) and after 2012 (second graph).
 
-{% include Actual_vs_predicted_SI.html %}
+{% include Actual_vs_predicted_SI_before_2012.html %}
+
+{% include Actual_vs_predicted_SI_after2012.html %}
 
 The predictability is very low, there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. Titles seems to have a very low influence on the Success of movies. We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of these features. 
 
 {% include Pie_chart_features_contrib_title_only.html %}
 
-The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and may not appear here as important features. 
+The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and do not appear here as such important features.
 
 To continue further our analysis we tried to look into the predictability taking into account other features not always related to the title such as the Movie runtime, the main genre, the presence of famous actors... 
 
 {% include Actual_vs_predicted_SI_all.html %}
 
-The predicatbility is increased, there is a better correlation between Actual and Predicted Success indicator. Once again we also took a look at the contribution of each features to the model. This is a good first approximation of the importance of features on the success of movies.
+The preditability is increased by taking into account other features not included in the title, but still remains low. Among these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are among the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs).
 
 {% include Pie_chart_features_contrib.html %}
 
