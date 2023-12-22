@@ -64,7 +64,7 @@ As only the `Person` and `Organization` entities are well represented in title, 
 
 Before to switch to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
 
-{% include carousel_2.html %}
+{% include carousel.html %}
 
 # Successful titles analysis
 
@@ -236,10 +236,6 @@ The preditability is increased but still remains low (mean squarred error = 0.74
 
 {% include Pie_chart_features_contrib.html %}
 
-
-Before the conclude this analysis, here are some more fun facts about movie titles :
-
-{% include carousel.html %}
 
 
 ## Conclusion 
