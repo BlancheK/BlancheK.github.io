@@ -21,7 +21,7 @@ How is a movie title designed? A movie title is the first thing we discover abou
 {% include test_carousel.html %}
 
 
-We aim to investigate the correlation bewteen a movie title and its **success**. Our initial analysis involves basic movie titles analysis and time series analysis to gain more insights on this scope. We will examine the impact of factors like length, including the protagonist's name, sementics elements, sentiment analysis on the movie success. However, the link between the success of a movie and its title is more subtle than just looking at the box office revenues and audience ratings of the movie. **Confounders** indeed have to be taken in account, such as actors and directors fame, movie production compagnies or budget dedicated to the movie. Moreover, we will try to draw the different title strategies for different **movie genres**. Eventually, we will try to predict the success of the title based on different paremeters.
+We aim to investigate the correlation bewteen a movie title and its **success**. Our initial analysis involves basic movie titles analysis and time series analysis to gain more insights on this scope. We will examine the impact of factors like length, including the protagonist's name, sementics elements, sentiment analysis on the movie success. However, the link between the success of a movie and its title is more subtle than just looking at the box office revenues and audience ratings of the movie. **Confounders** indeed have to be taken in account, such as actors and directors fame, movie production compagnies or budget dedicated to the movie. Eventually, we will try to predict the success of the title based on different paremeters.
 
 # Insights on titles
 
@@ -67,11 +67,11 @@ The following plot explore how positive and negative sentiment tones in title ev
 
 The presence of a protagonist name or of a specific place in a movie title could influence its success. A part-of-speech NLP analysis enables us to analyze the evolution of the presence of named entities over time.
 
-As only the `Person` and `Organization` proper nouns are well represented in title, only those types are kept for the analysis.
+As only the `Person` and `Organization` entities are well represented in title, only those types are kept for the analysis.
 
 {% include times-series-part-of-speech.html %}
 
-* From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person proper noun.
+* From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person entity.
 
 
 
@@ -93,7 +93,7 @@ We are studying the influence of the cast on a movie's success, specifically exp
 
 {% include confounder-actors.html %}
 
-Our findings suggest a positive correlation between the presence of famous actors and increased movie success. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
+Our findings suggest a positive correlation between the presence of famous actors and increased movie success: the success indicator increases i,n average by '0.22' for 1 famous actor casted in the movie. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
 
 #### Famous movie studios 
 
@@ -104,7 +104,7 @@ NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Di
 
 {% include confounder-studios.html %}
 
-Our result seems to clearly attribute an advantage for movies produced by famous studios. This may confirm our naive hypothesis that the production studio is another confounder to take into account for our further analysis.
+Our result seems to clearly attribute an advantage for movies produced by famous studios. The success indicator increases in average by '2.1' for famous studios. This may confirm our naive hypothesis that the production studio is another confounder to take into account for our further analysis.
 
 #### Famous directors 
 
@@ -115,7 +115,7 @@ We explored the impact of renowned film directors on movie success : this analys
 
 {% include confounder-directors.html %}
 
-Movies produced by the top 50 influential directors have a higher average success indicator, compare to other movies. Whether links to cinematographic quality or to pure commercial and trend effects, the director of a movie seems to influence its success, and might be added to the list of significant confounders.
+Movies produced by the top 50 influential directors have a higher average success indicator, compare to other movies. The success indicator increases i average by '0.54' for movies directed by famous directors. Whether links to cinematographic quality or to pure commercial and trend effects, the director of a movie seems to influence its success, and might be added to the list of significant confounders.
 
 #### Movie budget 
 
@@ -154,7 +154,7 @@ Two contrasting examples that highlight the impact of title length and style are
 
 {% include success-length-characters-heatmap.html %}
 
-Upon plotting the number of characters in movie titles against the success of the movies, we observe a heavy-tailed distribution, and no discernible correlation. This suggests that the length of movie titles, in terms of character count, does not inherently influence their level of success.
+Upon plotting the number of characters in movie titles against the success of the movies, we observe a heavy-tailed distribution with a maximum for 11 characters, and no discernible correlation. This suggests that the length of movie titles, in terms of character count, does not inherently influence their level of success.
 
 
 ### Part-of-speech tagging : an insight on grammatical structure of the title (verbs, adjective)
@@ -163,24 +163,24 @@ Moving on to the grammatical construction of titles and its association with mov
 
 {% include success-grammatical-tag.html %}
 
-There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions'. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with 'nouns' was not an artefact. When looking at each tag occurence, there is a signifant number of 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
+There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions' (the success indicator is greater thatn '0.79'). However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associated with 'nouns' was not an artefact. When looking at each tag occurence, we count  2620 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
 
 We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other tags categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tag. 
 
 
 ### Named Entity Recognition:
 
-The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having Person, Location of Date objects in the title on success.
+The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having 'Person', 'Location' or 'Date' objects in the title on success.
 
-We first tried to see the influence of organisation names and persons occurences on the movie success. 
+We first tried to see the influence of 'Organization' and 'Person' occurences on the movie success. 
 
 {% include success-org-pers-ner.html %}
 
-We see that the number of organisation and person items influence the success indicator. 'organisation': the success is maximum for 2 Organization occurences and minimum for 3. 'person': the success is maximum for 3 Person occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 Organizations NER or 3 Person NER might be due to a low number of occurences in the dataset, hence creating high variance.
+We see that the number of 'Organisation' and 'Person' entities influence the success indicator. 'Organisation': the success is maximum for 2 occurences and minimum for 3. 'Person': the success is maximum for 3 occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 'Organization' NER or 3 'Person' NER might be due to a low number of occurences in the dataset, hence creating high variance.
 
-Instead of looking at the number of occurences of person or organization type, we can decide to compare movie titles with at least one person or one organization type. If the title contains both types, it will be considered in both categories.
+Instead of looking at the number of occurences of 'Person' and 'Organization', we can decide to compare movie titles with at least one 'Person' or one 'Organization' entity. If the title contains both types, it will be considered in both categories.
 
-According to this plot, having a named 'organization' or 'person' in the movie title influences the success of the movie (almost x3). We don't see much difference between the organization and the person type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'organisation' or 'person' item might be significant because of the few titles that contain more than one occurence.
+According to this plot, having a named entity 'Organization' or 'Person' in the movie title influences the success of the movie (almost multiplied by '3'). We don't see much difference between the 'Organization' and the 'Person' type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'Organisation' or 'Person' item might be significant because of the few titles that contain more than one occurence.
 
 
 ### Presence of protagonist name
