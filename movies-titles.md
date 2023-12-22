@@ -93,7 +93,7 @@ We are studying the influence of the cast on a movie's success, specifically exp
 
 {% include confounder-actors.html %}
 
-Our findings suggest a positive correlation between the presence of famous actors and increased movie success: the success indicator increases i,n average by '0.22' for 1 famous actor casted in the movie. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
+Our findings suggest a positive correlation between the presence of famous actors and increased movie success: the success indicator increases in average by '0.22' for 1 famous actor casted in the movie. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
 
 #### Famous movie studios 
 
