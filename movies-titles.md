@@ -12,19 +12,6 @@ carousel_images:
   - url: /assets/img/FunFacts/Lamb.jpg
     alt: Image 3
 
-
-
-carousels:
-  - images: 
-    - image: /_includes/img/Eternal.jpg
-    - image: /_includes/img/Coucou.jpg
-    - image: /_includes/img/Lamb.jpg
-    - image: /_includes/img/HiddenFigures.jpg
-  - images: 
-    - image: /_includes/img/Blood.jpg
-    - image: /_includes/img/Apocalypse.jpg
-    - image: /_includes/img/TheWolf.jpg
-    - image: /_includes/img/KillBill.jpg
 ---
 
 
@@ -38,9 +25,7 @@ How is a movie title designed? A movie title is the first thing we discover abou
 We aim to investigate the correlation bewteen a movie title and its **success**. Our initial analysis involves basic movie titles analysis and time series analysis to gain more insights on this scope. We will examine the impact of factors like length, including the protagonist's name, sementics elements, sentiment analysis on the movie success. However, the link between the success of a movie and its title is more subtle than just looking at the box office revenues and audience ratings of the movie. **Confounders** indeed have to be taken in account, such as actors and directors fame, movie production compagnies or budget dedicated to the movie. Eventually, we will try to predict the success of the title based on different paremeters.
 
 
-{% include carousel.html height="50" unit="%" duration="7" number="1" %}
-
-{% include carousel.html height="50" unit="%" duration="7" number="2" %}
+{% include carousel.html %}
 
 
 # Insights on titles
