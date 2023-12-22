@@ -16,15 +16,15 @@ carousel_images:
 
 carousels:
   - images: 
-      - image: /_includes/img/Eternal.jpg
-      - image: /_includes/img/Coucou.jpg
-      - image: /_includes/img/Lamb.jpg
-      - image: /_includes/img/HiddenFigures.jpg
+    - image: /_includes/img/Eternal.jpg
+    - image: /_includes/img/Coucou.jpg
+    - image: /_includes/img/Lamb.jpg
+    - image: /_includes/img/HiddenFigures.jpg
   - images: 
-      - image: /_includes/img/Blood.jpg
-      - image: /_includes/img/Apocalypse.jpg
-      - image: /_includes/img/TheWolf.jpg
-      - image: /_includes/img/KillBill.jpg
+    - image: /_includes/img/Blood.jpg
+    - image: /_includes/img/Apocalypse.jpg
+    - image: /_includes/img/TheWolf.jpg
+    - image: /_includes/img/KillBill.jpg
 ---
 
 
