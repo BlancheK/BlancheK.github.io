@@ -193,7 +193,7 @@ Examples of movies that incorporate the protagonist's name into the title includ
 {% include success-protagonist.html %}
 
 
-Based on this plot, the presence of the protagonist name in the title is associated with a lower success. Movie titles that explicitly mention the protagonist's name may reveal too much about the plot, leaving little room for audience curiosity, or on the contrary not tell enough about the movie theme. This is surprising but it will have not be very important since only negligeable part of the movies (49/2412 = 0.2%) have the protagonist name in the title, and it might bring too much variance to our analysis. 
+Based on this plot, the presence of the 'Protagonist name' in the title is associated with a lower success: the 'Success indicator' decreases in average by '0.22' . Movie titles that explicitly mention the protagonist's name may reveal too much about the plot, leaving little room for audience curiosity, or on the contrary not tell enough about the movie theme. This is surprising but it will have not be very important since only negligeable part of the movies (49/2412 = 0.2%) have the 'Protagonist name' in the title, and it might bring too much variance to our analysis. 
 
 
 
@@ -208,24 +208,24 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 {% include success-sentiments.html %}
 
-The sentiment score does not seem to have a significant influence on the success indicator. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
+The 'Sentiment score' does not seem to have a significant influence on the 'Success indicator'. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
 
 ## Prediction
 
 ### Genre classification 
 
-A movie genre classification system was developed through two distinct but complementary approaches to predict the movie genre based on the movie title. A vocabulary lists for each genre was generated with the assistance of generative AI and a classifier was trained using movie summaries to capture genre-specific vocabulary. Movie titles were subsequently tested against this combined vocabulary for genre classification. 
+A movie genre classification system was developed through two distinct but complementary approaches to predict the movie genre based on the movie title. A vocabulary lists for each genre was generated with the assistance of **generative AI** and a **classifier** was trained using movie summaries to capture genre-specific vocabulary. Movie titles were subsequently tested against this combined vocabulary for genre classification. 
 
 {% include precision-recall.html %}
 
 {% include precision-recall-0-1.html %}
-The accuracy of our model remained low : 6%, with a precision of 29%. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
-Movie titles are designed with the intention of catching attention and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are inherently concise, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it challenging to extract relevant genre-related information and eading to diverse genre predictions.
+The accuracy of our model remained low at '6%', with a precision of '29%'. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
+Movie titles are designed with the intention of **catching attention** and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are **inherently concise**, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it **challenging** to extract relevant genre-related information and eading to diverse genre predictions.
 
 
 ### Prediction of the movie success
 
-We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
+We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a 'Random Forest Regressor', to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
 
 {% include Actual_vs_predicted_SI_before_2012.html %}
 
