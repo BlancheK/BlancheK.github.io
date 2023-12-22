@@ -67,6 +67,9 @@ As only the `Person` and `Organization` entities are well represented in title, 
 * From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person entity.
 
 
+Before to switch to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
+
+{% include carousel.html %}
 
 # Successful titles analysis
 
@@ -237,6 +240,11 @@ To continue further our analysis we tried to look into the predictability taking
 The preditability is increased but still remains low (mean squarred error = 0.74). Among all these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs, Protagonist in title...).
 
 {% include Pie_chart_features_contrib.html %}
+
+
+Before the conclude this analysis, here are some more fun facts about movie titles :
+
+{% include carousel_2.html %}
 
 
 ## Conclusion 
