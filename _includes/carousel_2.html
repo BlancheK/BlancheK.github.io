@@ -1,1 +1,91 @@
+<html>
+    <head>
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 500px;
+    overflow: hidden;
+}
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+.menu label:hover,.menu label:focus {
+    background: #1c87c9;
+}
+.slide-input{
+    opacity: 0;
+}
+.slide-img {
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide-img {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
 
+</style>
+    </head>
+    <body>
+        <div class="slider-container">
+            <div class="menu">
+                <label for="slide-dot-1"></label>
+                <label for="slide-dot-2"></label>
+                <label for="slide-dot-3"></label>
+                <label for="slide-dot-4"></label>
+                <label for="slide-dot-5"></label>
+                <label for="slide-dot-6"></label>
+            </div>
+
+            <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Coucou.jpg?raw=true">
+
+            <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Lamb.jpg?raw=true">
+
+            <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/HiddenFigures.jpg?raw=true">
+
+            <input class="slide-input" id="slide-dot-4" type="radio" name="slides">
+            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/SpiritedAway.jpg?raw=true">
+
+            <input class="slide-input" id="slide-dot-5" type="radio" name="slides">
+            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/StreetCar.jpg?raw=true">
+
+            <input class="slide-input" id="slide-dot-6" type="radio" name="slides">
+            <img class="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Eternal.jpg?raw=true">
+
+        </div>
+    </body>
+</html>
