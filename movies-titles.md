@@ -84,7 +84,7 @@ We are studying the influence of the cast on a movie's success, specifically exp
 
 {% include confounder-actors.html %}
 
-Our findings suggest a positive correlation between the presence of famous actors and increased movie success: the success indicator increases in average by '0.22' for 1 famous actor casted in the movie. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
+Our findings suggest a positive correlation between the presence of famous actors and increased movie success: the success indicator increases in average by `0.22` for 1 famous actor casted in the movie. This observation is interesting as renowned actors may serve as confounding variables, potentially impacting the relationship between our movie title and its success. 
 
 #### Famous movie studios 
 
@@ -95,7 +95,7 @@ NBCUniversal, Paramount Pictures Corporation, Warner Bros Entertainment, Walt Di
 
 {% include confounder-studios.html %}
 
-Our result seems to clearly attribute an advantage for movies produced by famous studios. The success indicator increases in average by '2.1' for famous studios. This may confirm our naive hypothesis that the production studio is another confounder to take into account for our further analysis.
+Our result seems to clearly attribute an advantage for movies produced by famous studios. The success indicator increases in average by `2.1` for famous studios. This may confirm our naive hypothesis that the production studio is another confounder to take into account for our further analysis.
 
 #### Famous directors 
 
@@ -106,7 +106,7 @@ We explored the impact of renowned film directors on movie success : this analys
 
 {% include confounder-directors.html %}
 
-Movies produced by the top 50 influential directors have a higher average success indicator, compare to other movies. The success indicator increases i average by '0.54' for movies directed by famous directors. Whether links to cinematographic quality or to pure commercial and trend effects, the director of a movie seems to influence its success, and might be added to the list of significant confounders.
+Movies produced by the top 50 influential directors have a higher average success indicator, compare to other movies. The success indicator increases i average by `0.54` for movies directed by famous directors. Whether links to cinematographic quality or to pure commercial and trend effects, the director of a movie seems to influence its success, and might be added to the list of significant confounders.
 
 #### Movie budget 
 
@@ -154,24 +154,24 @@ Moving on to the grammatical construction of titles and its association with mov
 
 {% include success-grammatical-tag.html %}
 
-There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions' (the success indicator is greater thatn '0.79'). However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associated with 'nouns' was not an artefact. When looking at each tag occurence, we count  2620 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
+There is a strong success indicator for films containing `adjectives`, `adverbs` and `conjunctions` (the success indicator is greater thatn `0.79`). However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associated with `nouns` was not an artefact. When looking at each tag occurence, we count  2620 `nouns`. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
 
-We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other tags categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tag. 
+We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing `adverbs` is lower than other tags categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tag. 
 
 
 ### Named Entity Recognition:
 
-The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having 'Person', 'Location' or 'Date' objects in the title on success.
+The inclusion of a named entity in a movie title can be a strategic storytelling choice that immediately centers the narrative around specific topics. This approach serves multiple purposes in shaping audience expectations and marketing the film. That's why we used Named Entity Recognition to unravel the influence of having `Person`, `Location` or `Date` objects in the title on success.
 
-We first tried to see the influence of 'Organization' and 'Person' occurences on the movie success. 
+We first tried to see the influence of `Organization` and `Person` occurences on the movie success. 
 
 {% include success-org-pers-ner.html %}
 
-We see that the number of 'Organisation' and 'Person' entities influence the success indicator. 'Organisation': the success is maximum for 2 occurences and minimum for 3. 'Person': the success is maximum for 3 occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 'Organization' NER or 3 'Person' NER might be due to a low number of occurences in the dataset, hence creating high variance.
+We see that the number of `Organisation` and `Person` entities influence the success indicator. `Organisation`: the success is maximum for 2 occurences and minimum for 3. `Person`: the success is maximum for 3 occurences and zero for 0 to 2 occurences. However, we think that the high succes of titles with 2 `Organization` NER or 3 `Person` NER might be due to a low number of occurences in the dataset, hence creating high variance.
 
-Instead of looking at the number of occurences of 'Person' and 'Organization', we can decide to compare movie titles with at least one 'Person' or one 'Organization' entity. If the title contains both types, it will be considered in both categories.
+Instead of looking at the number of occurences of `Person` and `Organization`, we can decide to compare movie titles with at least one `Person` or one `Organization` entity. If the title contains both types, it will be considered in both categories.
 
-According to this plot, having a named entity 'Organization' or 'Person' in the movie title influences the success of the movie (almost multiplied by '3'). We don't see much difference between the 'Organization' and the 'Person' type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no 'Organisation' or 'Person' item might be significant because of the few titles that contain more than one occurence.
+According to this plot, having a named entity `Organization` or `Person` in the movie title influences the success of the movie (almost multiplied by `3`). We don't see much difference between the `Organization` and the `Person` type. However, we must nuance those results by taking into account the previous plots, the difference with titles that contain no `Organisation` or `Person` item might be significant because of the few titles that contain more than one occurence.
 
 
 ### Presence of protagonist name
@@ -184,7 +184,7 @@ Examples of movies that incorporate the protagonist's name into the title includ
 {% include success-protagonist.html %}
 
 
-Based on this plot, the presence of the 'Protagonist name' in the title is associated with a lower success: the 'Success indicator' decreases in average by '0.22' . Movie titles that explicitly mention the protagonist's name may reveal too much about the plot, leaving little room for audience curiosity, or on the contrary not tell enough about the movie theme. This is surprising but it will have not be very important since only negligeable part of the movies (49/2412 = 0.2%) have the 'Protagonist name' in the title, and it might bring too much variance to our analysis. 
+Based on this plot, the presence of the `Protagonist name` in the title is associated with a lower success: the `Success indicator` decreases in average by `0.22` . Movie titles that explicitly mention the protagonist's name may reveal too much about the plot, leaving little room for audience curiosity, or on the contrary not tell enough about the movie theme. This is surprising but it will have not be very important since only negligeable part of the movies (49/2412 = 0.2%) have the `Protagonist name` in the title, and it might bring too much variance to our analysis. 
 
 
 
@@ -199,7 +199,7 @@ Conversely, a negatively framed title might generate intrigue or set a darker to
 
 {% include success-sentiments.html %}
 
-The 'Sentiment score' does not seem to have a significant influence on the 'Success indicator'. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
+The `Sentiment score` does not seem to have a significant influence on the `Success indicator`. When looking at the distribution of movies according to sentiment analysis, both scores are centered on 0, meaning most titles do not convey any sentiment. 
 
 ## Prediction
 
@@ -210,13 +210,13 @@ A movie genre classification system was developed through two distinct but compl
 {% include precision-recall.html %}
 
 {% include precision-recall-0-1.html %}
-The accuracy of our model remained low at '6%', with a precision of '29%'. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
+The accuracy of our model remained low at `6%`, with a precision of `29%`. We can see that some genres are predicted more or less efficicently, for instance romance and thriller movies seems to be better predicted, while adventure, documentary or world-cinema are are to predict. 
 Movie titles are designed with the intention of **catching attention** and providing a glimpse into the theme of the movie. However, they might not always encapsulate the intricate details and nuances of a genre : titles are **inherently concise**, aiming to be memorable. This brevity often leads to abstractness and ambiguity, making it **challenging** to extract relevant genre-related information and eading to diverse genre predictions.
 
 
 ### Prediction of the movie success
 
-We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a 'Random Forest Regressor', to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
+We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a `Random Forest Regressor`, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
 
 {% include Actual_vs_predicted_SI_before_2012.html %}
 
