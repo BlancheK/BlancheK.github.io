@@ -62,7 +62,7 @@ As only the `Person` and `Organization` entities are well represented in title, 
 * From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person entity.
 
 
-Before to switch to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
+Before switching to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
 
 {% include carousel.html %}
 
@@ -216,23 +216,23 @@ Movie titles are designed with the intention of **catching attention** and provi
 
 ### Prediction of the movie success
 
-We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a `Random Forest Regressor`, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
+We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a `Random Forest Regressor`, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consisted of 80% of the dataset.
 
 {% include Actual_vs_predicted_SI_before_2012.html %}
 
 {% include Actual_vs_predicted_SI_after2012.html %}
 
-The predictability is very low (mean squarred error = 0.89 for movies before 2012), there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. The components of titles analysed here seems to have a very low influence on the success of movies. Maybe some other features should be taken into account, or maybe titles are not so important for the success of movies... We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of them.
+The predictability is very low (mean squarred error = `0.89` for movies before 2012), there is **no correlation** between the Predicted Success indicator and the Actual Sucess indicator. The components of titles analysed here seems to have a **very low influence** on the success of movies. Maybe some other features should be taken into account, or maybe titles are not so important for the success of movies... We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of them.
 
 {% include Pie_chart_features_contrib_title_only.html %}
 
-The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and do not appear here as such important features.
+The main features are here the features that have a large range of values for each movies allowing the model to be **more discriminative** and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and do not appear here as such important features.
 
-To continue further our analysis we tried to look into the predictability taking into account other features and cofounders that not always related to the title such as the movie runtime, the main genre, the presence of famous actors and so on.
+To continue further our analysis we tried to look into the predictability taking into account other features and confounders that not always related to the title such as the `movie runtime`, `the main genre`, the presence of `famous actors` and so on.
 
 {% include Actual_vs_predicted_SI_all.html %}
 
-The preditability is increased but still remains low (mean squarred error = 0.74). Among all these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs, Protagonist in title...).
+The preditability is increased but still remains low (mean squarred error = 0.74). Among all these features, `Movie_runtime`, `Movie_countries`, `Famous_actor_count`, `Movie_main_genre`, and `Movie_release_date` are the most important features to take into account (these five features alone contribute to **more than 60%** of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as `Conjunctions`, `Adjectives`, `Verbs`, `Protagonist in title`...).
 
 {% include Pie_chart_features_contrib.html %}
 
