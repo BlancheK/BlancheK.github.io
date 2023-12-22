@@ -1,82 +1,137 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Custom Slider</title>
+<style>
 
-    <style>
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-img {
-    max-width: 100%;
-}
-.slider-container {
+.custom-slider { display: none; }
+.slide-container {
     max-width: 800px;
     position: relative;
     margin: auto;
-    height: 350px;
-    overflow: hidden;
 }
-.menu {
+.prev, .next {
+    cursor: pointer;
     position: absolute;
-    left: 0;
-    z-index: 11;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.6s ease;
+}
+.prev{ left: 15px; }
+.next { right: 15px; }
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.slide-text {
+    position: absolute;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px;
+    bottom: 15px;
     width: 100%;
-    bottom: 0;
     text-align: center;
 }
-.menu label {
-    cursor: pointer;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    border-radius: 50px;
-    margin: 0 0.2em 1em;
-}
-.menu label:hover,.menu label:focus {
-    background: #1c87c9;
-}
-.slide-input{
-    opacity: 0;
-}
-.slide-img {
-    width: 100%;
-    height: 300px;
+.slide-index {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 15px;
     position: absolute;
     top: 0;
-    left: 100%;
-    z-index: 10;
-    transition: left 0s 0.75s;
 }
-[id^="slide"]:checked + .slide-img {
-    left: 0;
-    z-index: 100;
-    transition: left 0.65s ease-out;
+.slide-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.slide-dot{ text-align: center; }
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover { background-color: #111111; }
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
 }
 
-    </style>
+    
+</style>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("custom-slider");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+    
+</script>
     </head>
     <body>
-        <div class="slider-container">
-            <div class="menu">
-                <label for="slide-dot-1"></label>
-                <label for="slide-dot-2"></label>
-                <label for="slide-dot-3"></label>
+        <div class="slide-container">
+            <div class="custom-slider fade">
+                <div class="slide-index">1 / 3</div>
+                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide1.jpg">
+                <div class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
             </div>
-
-            <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Apocalypse.jpg?raw=true">
-
-            <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
-            <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide2.jpg">
-
-            <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
-            <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide3.jpg">
-
+            <div class="custom-slider fade">
+                <div class="slide-index">2 / 3</div>
+                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide2.jpg">
+                <div class="slide-text">Nullam luctus aliquam ornare. </div>
+            </div>
+            <div class="custom-slider fade">
+                <div class="slide-index">3 / 3</div>
+                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide3.jpg">
+                <div class="slide-text">Praesent lobortis libero sed egestas suscipit.</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div class="slide-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </body>
 </html>
