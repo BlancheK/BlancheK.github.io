@@ -10,6 +10,10 @@ How is a movie title designed? A movie title is the first thing we discover abou
 
 We aim to investigate the correlation bewteen a movie title and its **success**. Our initial analysis involves basic movie titles analysis and time series analysis to gain more insights on this scope. We will examine the impact of factors like length, including the protagonist's name, sementics elements, sentiment analysis on the movie success. However, the link between the success of a movie and its title is more subtle than just looking at the box office revenues and audience ratings of the movie. **Confounders** indeed have to be taken in account, such as actors and directors fame, movie production compagnies or budget dedicated to the movie. Eventually, we will try to predict the success of the title based on different paremeters.
 
+Before diving into the indepth analysis of movie titles, here are some fun facts!
+
+{% include carousel.html %}
+
 
 # Insights on titles
 
@@ -62,9 +66,7 @@ As only the `Person` and `Organization` entities are well represented in title, 
 * From 1980, around 50% of the movie titles include an organization or a person proper noun, the values range between 40% and 60%. It means that one movie title out of 2 contains an organization or a person entity.
 
 
-Before switching to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
 
-{% include carousel.html %}
 
 # Successful titles analysis
 
