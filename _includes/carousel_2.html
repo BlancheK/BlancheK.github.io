@@ -10,14 +10,14 @@ html, body {
 img {
     max-width: 100%;
 }
-.slider-container {
+.slider-container2 {
     max-width: 800px;
     position: relative;
     margin: auto;
     height: 500px;
     overflow: hidden;
 }
-.menu {
+.menu2 {
     position: absolute;
     left: 0;
     z-index: 11;
@@ -25,7 +25,7 @@ img {
     bottom: 0;
     text-align: center;
 }
-.menu label {
+.menu2 label {
     cursor: pointer;
     display: inline-block;
     width: 10px;
@@ -34,13 +34,13 @@ img {
     border-radius: 50px;
     margin: 0 0.2em 1em;
 }
-.menu label:hover,.menu label:focus {
+.menu2 label:hover,.menu2 label:focus {
     background: #1c87c9;
 }
-.slide-input{
+.slide-input2{
     opacity: 0;
 }
-.slide-img {
+.slide-img2 {
     width: 100%;
     height: 450px;
     position: absolute;
@@ -49,7 +49,7 @@ img {
     z-index: 10;
     transition: left 0s 0.75s;
 }
-[id^="slide"]:checked + .slide-img {
+[id^="slide"]:checked + .slide-img2 {
     left: 0;
     z-index: 100;
     transition: left 0.65s ease-out;
@@ -58,8 +58,8 @@ img {
 </style>
     </head>
     <body>
-        <div class="slider-container">
-            <div class="menu">
+        <div class="slider-container2">
+            <div class="menu2">
                 <label for="carousel2-slide-dot-1"></label>
                 <label for="carousel2-slide-dot-2"></label>
                 <label for="carousel2-slide-dot-3"></label>
@@ -68,23 +68,23 @@ img {
                 <label for="carousel2-slide-dot-6"></label>
             </div>
 
-            <input class="slide-input" id="carousel2-slide-dot-1" type="radio" name="slides" checked>
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Coucou.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-1" type="radio" name="slides" checked>
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Coucou.jpg?raw=true">
 
-            <input class="slide-input" id="carousel2-slide-dot-2" type="radio" name="slides">
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Lamb.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-2" type="radio" name="slides">
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Lamb.jpg?raw=true">
 
-            <input class="slide-input" id="carousel2-slide-dot-3" type="radio" name="slides">
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/HiddenFigures.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-3" type="radio" name="slides">
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/HiddenFigures.jpg?raw=true">
 
-            <input class="slide-input" id="carousel2-slide-dot-4" type="radio" name="slides">
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/SpiritedAway.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-4" type="radio" name="slides">
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/SpiritedAway.jpg?raw=true">
 
-            <input class="slide-input" id="carousel2-slide-dot-5" type="radio" name="slides">
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/StreetCar.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-5" type="radio" name="slides">
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/StreetCar.jpg?raw=true">
 
-            <input class="slide-input" id="carousel2-slide-dot-6" type="radio" name="slides">
-            <img class="slide-img" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Eternal.jpg?raw=true">
+            <input class="slide-input2" id="carousel2-slide-dot-6" type="radio" name="slides">
+            <img class="slide-img2" src="https://github.com/BlancheK/MovieTitles/blob/master/assets/img/FunFacts/Eternal.jpg?raw=true">
 
         </div>
     </body>
