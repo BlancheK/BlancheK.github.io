@@ -123,7 +123,7 @@ The budget of a movie affects its production quality, scale, and marketing effor
 
 {% include confounder-budget.html %}
 
-It appears that there is an potential positve correlation between movie's budget and the movie's success indicator. However, we need to dig into the data and the statistical relevance of the correlation to confirm the confounding effect of the budget. 
+It appears that there is an potential positive correlation between movie's budget and the movie's success indicator. However, we need to dig into the data and the statistical relevance of the correlation to confirm the confounding effect of the budget. 
 
 #### Movie genre
 
@@ -163,9 +163,9 @@ Moving on to the grammatical construction of titles and its association with mov
 
 {% include success-grammatical-tag.html %}
 
-There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions'. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with 'nouns' was not an artefact. When looking at each tagg occurence, there is a signifant number of 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
+There is a strong success indicator for films containing 'adjectives', 'adverbs' and 'conjunctions'. However, films with nouns seem to have a null success indicator which seems strange. We checked wheter this low success associoted with 'nouns' was not an artefact. When looking at each tag occurence, there is a signifant number of 'nouns'. The variance is thus quite low and it is reliable to assert that nouns do not influence the success of the movie title. 
 
-We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other taggs categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tagg. 
+We also need to look at the number of films in each categories to see if comparing the error bars is relevant or not. For instance the number of movie titles containing 'adverbs' is lower than other tags categories (187 titles contain adverbs vs 2620 titles contain nouns). This results in higher variance for the adverb tag. 
 
 
 ### Named Entity Recognition:
@@ -225,23 +225,23 @@ Movie titles are designed with the intention of catching attention and providing
 
 ### Prediction of the movie success
 
-We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, snetiment analysis...) We choosed the main features from our key features analysis about titles we only removed the few one that had a different value in very few movies (such as Interjections as disucssed before), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (first graph) and after 2012 (second graph).
+We first wanted to have a look at how the features of a the title could contribute to it's success. We built a machine learing algorithm, a Random Forest Regressor, to look into it and try to predict the success of movies using only the title and the features we extracted (part of speech, title length, sentiment analysis...). We choosed the main features from our key features analysis about titles and only removed the few one that were present in very few or no movies (such as Interjections), and the genre classification as it has a very low accuracy. Here we tested it on movies realeased before (20% of the initial dataset; first graph) and after 2012 (second graph). The training set used consitsted of 80% of the dataset.
 
 {% include Actual_vs_predicted_SI_before_2012.html %}
 
 {% include Actual_vs_predicted_SI_after2012.html %}
 
-The predictability is very low (mean squarred error = 0.89 for movies before 2012), there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. Titles seems to have a very low influence on the Success of movies. We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of these features. 
+The predictability is very low (mean squarred error = 0.89 for movies before 2012), there is no correlation between the Predicted Success indicator and the Actual Sucess indicator. The components of titles analysed here seems to have a very low influence on the success of movies. Maybe some other features should be taken into account, or maybe titles are not so important for the success of movies... We still tried to look at the contribution of each features to our model, to have an idea of the importance of each of them.
 
 {% include Pie_chart_features_contrib_title_only.html %}
 
 The main features are here the features that have a large range of values for each movies allowing the model to be more discriminative and more precise (the title length in number of words or charachters). Some other features may be more discriminative but are only represented by few movies and do not appear here as such important features.
 
-To continue further our analysis we tried to look into the predictability taking into account other features not always related to the title such as the Movie runtime, the main genre, the presence of famous actors... 
+To continue further our analysis we tried to look into the predictability taking into account other features and cofounders that not always related to the title such as the movie runtime, the main genre, the presence of famous actors and so on.
 
 {% include Actual_vs_predicted_SI_all.html %}
 
-The preditability is increased by taking into account other features not included in the title, but still remains low (mean squarred error = 0.74). Among these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are among the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs).
+The preditability is increased but still remains low (mean squarred error = 0.74). Among all these features, Movie_runtime, Movie_countries, Famous_actor_count, Movie_main_genre, and Movie_release_date are the most important features to take into account (these five features alone contrbute to more than 60% of all the features contributions to the Random Forest Regressor). The features that have a broader range of values are on average contributing more than the other features. The ones that are less contributing are features for which only few movies have a different values from the others (such as Conjunctions, Adjectives, Verbs, Protagonist in title...).
 
 {% include Pie_chart_features_contrib.html %}
 
