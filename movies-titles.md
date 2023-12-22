@@ -39,6 +39,7 @@ We aim to investigate the correlation bewteen a movie title and its **success**.
 
 
 {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
 {% include carousel.html height="50" unit="%" duration="7" number="2" %}
 
 
