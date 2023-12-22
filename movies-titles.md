@@ -5,15 +5,10 @@ subtitle: How to design a successful movie title?
 cover-img: /assets/img/road.jpg
 ---
 
-{% include carousel.html %}
 
 How is a movie title designed? A movie title is the first thing we discover about a movie, **it is the hook that makes us want to see it**. Therefore it needs to be carefully designed. While a compelling title doesn't guarantee the success of your movie, it plays a crucial role in attracting the attention of the public. An intriguing title serves as a gateway to getting your film noticed, establishing an initial link with the audience who will be more inclined to go to the cinema to see it.
 
-
 We aim to investigate the correlation bewteen a movie title and its **success**. Our initial analysis involves basic movie titles analysis and time series analysis to gain more insights on this scope. We will examine the impact of factors like length, including the protagonist's name, sementics elements, sentiment analysis on the movie success. However, the link between the success of a movie and its title is more subtle than just looking at the box office revenues and audience ratings of the movie. **Confounders** indeed have to be taken in account, such as actors and directors fame, movie production compagnies or budget dedicated to the movie. Eventually, we will try to predict the success of the title based on different paremeters.
-
-
-
 
 
 # Insights on titles
@@ -69,7 +64,7 @@ As only the `Person` and `Organization` entities are well represented in title, 
 
 Before to switch to success analysis of the movies and their link to the movie title, here are some fun facts about movie titles:
 
-{% include carousel.html %}
+{% include carousel_2.html %}
 
 # Successful titles analysis
 
@@ -244,7 +239,7 @@ The preditability is increased but still remains low (mean squarred error = 0.74
 
 Before the conclude this analysis, here are some more fun facts about movie titles :
 
-{% include carousel_2.html %}
+{% include carousel.html %}
 
 
 ## Conclusion 
